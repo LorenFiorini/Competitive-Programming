@@ -1,0 +1,8 @@
+import request
+
+res = requests.get('https://www.youtube.com/watch?v=iv-Uc8d3tDs')
+
+print(res)
+
+
+

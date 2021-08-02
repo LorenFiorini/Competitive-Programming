@@ -1,0 +1,5 @@
+from sympy.ntheory import factorint
+
+ok = False
+while not ok:
+	a = list(factorint, i)

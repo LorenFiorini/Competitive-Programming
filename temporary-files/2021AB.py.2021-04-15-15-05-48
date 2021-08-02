@@ -1,0 +1,31 @@
+
+
+def solve():
+	r, c = input().split()
+	r = int(r)
+	c = int(c)
+	grid = list(list(map(int, input().split())))
+	
+	for i in range(r):
+		for j in range(c):
+			print(grid[i][j], end = )
+	
+	
+	
+	
+	
+
+
+def main():
+	t = int(input())
+	for _ in range(1, t + 1):
+		ans = int(solve())
+		print("Case #{}: {}".format(_, ans))
+	
+
+
+
+
+if __name__ == '__main__':
+	main()
+

@@ -1,0 +1,14 @@
+from sympy.ntheory import factorint
+
+ok = False
+i = 0
+while not ok:
+	i += 1
+	a = list(factorint(i))
+	b = list(factorint(i+1))
+	c = list(factorint(i+2))
+	print(a)
+	print(b)
+	print(c)
+	if i == 25:
+		break

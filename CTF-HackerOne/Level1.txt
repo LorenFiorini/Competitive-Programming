@@ -1,0 +1,104 @@
+
+<!doctype html>
+<html>
+	<head>
+		<title>Micro-CMS</title>
+	</head>
+	<body>
+		<ul>
+<li><a href="page/1">Testing</a></li>
+<li><a href="page/2">Markdown Test</a></li>
+<li><a href="page/12"></a></li>
+<li><a href="page/13"></a></li>
+		</ul>
+		<a href="page/create">Create a new page</a>
+	</body>
+</html>
+
+
+
+
+
+
+<!doctype html>
+<html>
+	<head>
+		<title>Testing</title>
+	</head>
+	<body>
+		<a href="../">&lt;-- Go Home</a><br>
+		<a href="edit/1">Edit this page</a>
+		<h1>Testing</h1>
+<h1>Woo</h1>
+<p>Testing out this new micro-CMS!</p>
+	</body>
+</html>
+
+
+
+
+
+
+<!doctype html>
+<html>
+	<head>
+		<title>Markdown Test</title>
+	</head>
+	<body>
+		<a href="../">&lt;-- Go Home</a><br>
+		<a href="edit/2">Edit this page</a>
+		<h1>Markdown Test</h1>
+<p>Just testing some markdown functionality.</p>
+<p><img alt="adorable kitten" src="https://static1.squarespace.com/static/54e8ba93e4b07c3f655b452e/t/56c2a04520c64707756f4267/1493764650017/" /></p>
+<p><button>Some button</button></p>
+	</body>
+</html>
+
+
+
+
+
+
+<!doctype html>
+<html>
+	<head>
+		<title>Create page</title>
+	</head>
+	<body>
+		<a href="../">&lt;-- Go Home</a>
+		<h1>Create Page</h1>
+		<form method="POST">
+			Title: <input type="text" name="title"><br>
+			<textarea name="body" rows="10" cols="80"></textarea><br>
+			<input type="submit" value="Create">
+			<div style="font-style: italic"><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown</a> is supported, but scripts are not</div>
+		</form>
+	</body>
+</html>
+
+
+
+
+
+
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<a href="../">&lt;-- Go Home</a><br>
+		<a href="edit/12">Edit this page</a>
+		<h1></h1>
+
+	</body>
+</html>
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>400 Bad Request</title>
+<h1>Bad Request</h1>
+<p>The browser (or proxy) sent a request that this server could not understand.</p>

@@ -1,0 +1,17 @@
+import requests
+
+
+f = open("Level1.txt", "w")
+url = []
+urlappend('http://35.190.155.168/c65cf2a398/'
+
+
+a = requests.get(url)
+
+
+
+f.write(a.text)
+f.write("\n\n\n\n\n")
+
+
+

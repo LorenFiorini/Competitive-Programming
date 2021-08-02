@@ -1,0 +1,5 @@
+
+
+f.open('prime.txt', 'r')
+
+

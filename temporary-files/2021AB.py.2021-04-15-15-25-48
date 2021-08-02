@@ -1,0 +1,33 @@
+import numpy
+
+def solve(_):
+	R, C = input().split()
+	R = int(R)
+	C = int(C)
+	mat = list()
+	for i in range(R):
+		row = list(map(int, input().split()))
+		mat.append(row)
+	
+	for i in range(R):
+		for j in range(C):
+			
+	
+	
+	
+	ans = 0
+	print("Case #{}: {}".format(_, ans))
+
+
+def main():
+	t = int(input())
+	for _ in range(1, t + 1):
+		solve(_)
+	
+
+
+
+
+if __name__ == '__main__':
+	main()
+

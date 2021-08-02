@@ -1,0 +1,10 @@
+
+
+def main():
+    s = str(input())
+    ch = s[0]
+    
+    
+
+if __name__ == '__main__':
+    main()

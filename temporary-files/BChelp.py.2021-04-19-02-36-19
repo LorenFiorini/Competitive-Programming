@@ -1,0 +1,7 @@
+
+
+f.open('prime.txt', 'r')
+f2.open('out.txt', 'w')
+
+for row in f:
+	line = list(map(int, row.split()))

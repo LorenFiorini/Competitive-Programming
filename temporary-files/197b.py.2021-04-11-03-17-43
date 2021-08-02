@@ -1,0 +1,11 @@
+
+
+def main():
+    h, w, x, y = int(input().split())
+    print(x, y)
+    print(h, w)
+    
+    
+
+if __name__ == '__main__':
+    main()

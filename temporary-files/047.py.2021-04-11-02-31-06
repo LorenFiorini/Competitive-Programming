@@ -1,0 +1,18 @@
+from sympy.ntheory import factorint
+
+ok = False
+i = 0
+while not ok :
+	i += 1
+	a = list(factorint(i))
+	b = list(factorint(i+1))
+	c = list(factorint(i+2))
+	print("Numbers : {}, {} and {}".format(i, i+1, i+2))
+	print(a)
+	print(b)
+	print(c)
+	if a == b and b == c:
+		ok = True
+	else:
+		ok = False
+	

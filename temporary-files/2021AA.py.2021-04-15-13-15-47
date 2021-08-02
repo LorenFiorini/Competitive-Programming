@@ -1,0 +1,25 @@
+
+
+def solve():
+	n = int(input())
+	s = str(input())
+	
+	
+	
+	
+	
+	
+
+
+def main():
+	t = int(input())
+	for _ in range t:
+		print("Case #{}: {}".format(_ + 1, solve()))
+	
+	return 0
+
+
+
+
+if __name__ == '__main__':
+	main()

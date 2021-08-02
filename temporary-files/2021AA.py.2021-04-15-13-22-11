@@ -1,0 +1,27 @@
+
+
+def solve():
+	n, k = map(int, input().split())
+	s = str(input())
+	score = 0
+	for i in range(len(s) // 2):
+		if s[i] != s[-i]:
+			score += 1
+	
+	print(abs(k - score))
+	
+	
+
+
+def main():
+	t = int(input())
+	for _ in range(t):
+		print("Case #{}: {}".format(_ + 1, solve()))
+	
+	return 0
+
+
+
+
+if __name__ == '__main__':
+	main()

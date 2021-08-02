@@ -1,0 +1,14 @@
+
+
+def main():
+	for a in range(999):
+		for b in range(a+1, 1000):
+			for c in range(b+1, 1001):
+				if (a + b + c) == 1000:
+					print(a*b*c)
+	
+	
+	return 0
+
+if __name__ == '__main__':
+	main()

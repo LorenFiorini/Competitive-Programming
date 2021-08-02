@@ -1,0 +1,13 @@
+
+
+def main():
+	n = str(input())
+	for i in n - 13:
+		
+	
+	
+	
+    return 0
+
+if __name__ == '__main__':
+    main()

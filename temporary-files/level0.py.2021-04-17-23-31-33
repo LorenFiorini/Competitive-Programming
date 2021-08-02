@@ -1,0 +1,22 @@
+import requests
+
+url = 'http://35.190.155.168/2923d13786/'
+
+
+a = requests.get(url)
+
+f = open("Level0.txt", "w")
+
+
+f.write(a.text)
+f.write("\n\n\n\n\n")
+
+f.write(a.content)
+f.write("\n\n\n\n\n")
+
+
+f.write(a.)
+f.write("\n\n\n\n\n")
+
+
+

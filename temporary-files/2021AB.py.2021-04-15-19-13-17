@@ -1,0 +1,51 @@
+import numpy
+
+def count(mat, R, C, ans):
+	prerow = [[0] for i in range(C)] for j in range(R)
+	precol = [[0] for i in range(C)] for j in range(R) 
+	
+	for i in range(R):
+		for j in range(C):
+			prerow[i][j] = mat[i][j]
+			precol[i][j] = mat[i][j]
+			if mat[i][j] == 1 and j > 0:
+				prerow[i][j] += prerow[i][j-1]
+			if mat[i][j] == 1 and i > 0:
+				precol[i][j] += precol[i-1][j]
+	
+	for i in range(R):
+		for j in range(C):
+			print(.format(prerow[i][j]), end = " ")
+		print()
+	
+
+def solve(_):
+	R, C = input().split()
+	R = int(R)
+	C = int(C)
+	mat = list()
+	for i in range(R):
+		row = list(map(int, input().split()))
+		mat.append(row)
+	
+	ans = 0
+	count(mat, R, C, ans)
+	
+	
+	
+	
+	print("Case #{}: {}".format(_, ans))
+
+
+def main():
+	t = int(input())
+	for _ in range(1, t + 1):
+		solve(_)
+	
+
+
+
+
+if __name__ == '__main__':
+	main()
+

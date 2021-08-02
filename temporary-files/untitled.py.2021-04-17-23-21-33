@@ -1,0 +1,12 @@
+import requests
+
+url = 'http://35.190.155.168/2923d13786/'
+
+
+a = requests.get(url)
+
+print(a.text)
+print(a.)
+
+
+

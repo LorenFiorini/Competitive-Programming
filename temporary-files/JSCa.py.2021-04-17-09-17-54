@@ -1,0 +1,16 @@
+
+
+def main():
+	x, y, z = input().split()
+	x = int(x)
+	y = int(y)
+	z = int(z)
+	a = x * y / z
+	
+	a = ceil(a)
+	print(a)
+	
+	return 0
+
+if __name__ == '__main__':
+	main()

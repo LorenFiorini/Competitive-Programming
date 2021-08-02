@@ -1,0 +1,10 @@
+from sympy.ntheory import factorint
+
+ok = False
+i = 0
+while not ok:
+	i += 1
+	a = list(map(factorint, i))
+	print(a)
+	if i==5:
+		break
