@@ -34,14 +34,79 @@ typedef multiset<int> mseti;
 #define precision(d) cout << setprecision(d) << fixed;
 #define ff first
 #define ss second
+int n;
+
+void get_min(vint &v, seti st) {
+	rep (i, 0, n) {
+		if (v[i] == 0) {
+			v[i] = *(st.begin());
+			st.erase(v[i]);
+		}
+	}
+}
+
+void get_max(vint &v, seti st) {
+	rep (i, 0, n) {
+		if (v[i] == 0) 
+		{
+			for (int num = v[i-1] - 1; num > 0; num--) {
+				if (st.find(num) != st.end()) {
+					v[i] = num;
+					st.erase(num);
+					break;
+				}
+			}
+		}
+	}
+}
 
 void solve () {
-	int ans = 0;
-	int n;
 	cin >> n;
+	vint v(n);
+	rep (i, 0, n) cin >> v[i];
 	
+	seti stn;
+	seti stx;
+	rep (i, 1, n+1) {
+		stn.insert(i);
+		stx.insert(i);
+	}
 	
-	show(ans);
+	vint mn(all(v));
+	vint mx(all(v));
+	rep (i, 0, n) {
+		if (i == 0 || v[i-1] != v[i]) {
+			stn.erase(v[i]);
+			stx.erase(v[i]);
+		} else {
+			//min vector
+			mn[i] = *(stn.begin());
+			stn.erase(mn[i]);
+			
+			// max vector
+			/*	
+			for (int num = v[i-1] - 1; num > 0; num--) {
+				if (stx.find(num) != stx.end()) {
+					mx[i] = num;
+					stx.erase(num);
+					break;
+				}
+			}*/
+			auto up = stx.begin();
+			if (len(stx) > 1) {
+				up = upper_bound(all(stx), v[i]);
+				up--;
+			}
+			mx[i] = *(up);
+			stx.erase(up);
+		}
+	}
+	
+	//get_min(mn, st);
+	//get_max(mx, st);
+	
+	showv(mn, n);
+	showv(mx, n);
 }
 
 int main () 

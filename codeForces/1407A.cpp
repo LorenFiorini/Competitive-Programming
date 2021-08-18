@@ -18,11 +18,14 @@ typedef multiset<int> mseti;
 #define pb push_back
 //
 #define por(i, a, b, in) for (int i=a ; i<(b) ; i+=in)
+#define rpor(i, a, b, in) for (int i=a-1 ; i>=(b) ; i-=in)
 #define rep(i, a, b) por(i, a, b, 1)
+#define rrep(i, a, b) rpor(i, a, b, 1)
 #define each(it, mp) for (auto it = mp.begin(); it != mp.end(); it++)
 #define all(c) c.begin(), c.end()
 #define allg(c) all(c), greater<> ()
 #define len(v) (int) v.size()
+#define notin(c, x) ((c).find(x) == (c).end())
 //
 #define show(x) cout << x << "\n";
 #define showp(x, y) cout << x << " " << y << "\n";
@@ -36,12 +39,27 @@ typedef multiset<int> mseti;
 #define ss second
 
 void solve () {
-	int ans = 0;
 	int n;
 	cin >> n;
+	vint v(n);
+	rep (i, 0, n) cin >> v[i];
 	
+	int sum = 0;
+	rep (i, 0, n) {
+		sum += v[i] * ((i%2)? -1: 1);
+	}
 	
-	show(ans);
+	bool odd = sum < 0;
+	sum = abs(sum);
+	show(n - sum);
+	rep (i, 0, n) {
+		if (v[i]==1 && sum > 0 && (i+odd)%2==0 ) {
+			sum--;
+		} else {
+			cout << v[i] << " ";
+		}
+	}
+	cout << "\n";
 }
 
 int main () 

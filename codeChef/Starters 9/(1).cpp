@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define INF (int)1e9
-#define MOD 1000000007
+#define mod (ll) 1000000007
 #define PI 3.1415926535897932384626433832795
 //
 typedef long long ll;
@@ -32,14 +32,39 @@ typedef multiset<int> mseti;
 #define showset(it, st) each(it, st) {cout << *it << " ";} cout << "\n";
 #define showmap(it, mp) each(it, mp) {cout << it->ff << " " << it->ss << "\n";} cout << "\n";
 #define precision(d) cout << setprecision(d) << fixed;
-#define ff first
-#define ss second
+#define one first
+#define sz second
+
+pair<ll, ll> fib(int n) {
+	vector<vll> v(2, vll(2, 1));
+	v[0][0] = 0;
+	rep (i, 2, n+1) {
+		ll ones = v[0][0] + v[0][1];
+		ll sz = v[1][0] + v[1][1];
+		// move to first
+		v[0][0] = v[0][1];
+		v[1][0] = v[1][1];
+		// move to second
+		v[0][1] = ones;
+		v[1][1] = sz;
+	}
+	return {v[0][1], v[1][1]};
+}
 
 void solve () {
-	int ans = 0;
-	int n;
+	ll n;
 	cin >> n;
+	pair<ll, ll> par = fib(n);
 	
+	ll ans = par.one;
+	ll p = 1;
+	while (--(par.sz)) {
+		p <<= (ll) 1;
+		p %= mod;
+	}
+	
+	ans *= p;
+	ans %= mod;
 	
 	show(ans);
 }

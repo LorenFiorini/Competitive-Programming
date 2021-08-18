@@ -35,11 +35,24 @@ typedef multiset<int> mseti;
 #define ff first
 #define ss second
 
+int n, k;
+string s;
+	
+void fun(vint &v) {
+	rep (i, 0, n) {
+		if (s[i] == '1') {
+			v[i] = 1;
+			if ()
+		}
+	}
+}
+
 void solve () {
 	int ans = 0;
-	int n;
-	cin >> n;
-	
+	cin >> n >> k;
+	cin >> s;
+	vint v(n, 0);
+	fun(v);
 	
 	show(ans);
 }

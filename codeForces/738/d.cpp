@@ -18,11 +18,14 @@ typedef multiset<int> mseti;
 #define pb push_back
 //
 #define por(i, a, b, in) for (int i=a ; i<(b) ; i+=in)
+#define rpor(i, a, b, in) for (int i=a-1 ; i>=(b) ; i-=in)
 #define rep(i, a, b) por(i, a, b, 1)
+#define rrep(i, a, b) rpor(i, a, b, 1)
 #define each(it, mp) for (auto it = mp.begin(); it != mp.end(); it++)
 #define all(c) c.begin(), c.end()
 #define allg(c) all(c), greater<> ()
 #define len(v) (int) v.size()
+#define notin(c, x) ((c).find(x) == (c).end())
 //
 #define show(x) cout << x << "\n";
 #define showp(x, y) cout << x << " " << y << "\n";
@@ -37,8 +40,30 @@ typedef multiset<int> mseti;
 
 void solve () {
 	int ans = 0;
-	int n;
-	cin >> n;
+	int n, m1, m2;
+	cin >> n >> m1 >> m2;
+	
+	vvi v1(n);
+	rep (i, 0, m1) {
+		int a, b;
+		cin >> a >> b;
+		a--; b--;
+		v1[a].pb(b);
+		v1[b].pb(a);
+	}	
+	vvi v2(n);
+	rep (i, 0, m2) {
+		int a, b;
+		cin >> a >> b;
+		a--; b--;
+		v2[a].pb(b);
+		v2[b].pb(a);
+	}	
+	// already one tree
+	if (max(m1,m2) == n-1) {show(0); return;}
+	// answer <= [(n-1) - max(m1,m2)]
+	
+	
 	
 	
 	show(ans);
@@ -48,8 +73,6 @@ int main ()
 {
 	ios::sync_with_stdio(false);
 	cin.tie(0);
-	
-	int t; cin >> t; while (t--)
 	
 	solve();
 	

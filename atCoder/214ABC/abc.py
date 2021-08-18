@@ -13,15 +13,13 @@ if sys.version_info[0] < 3:
 
 #-----------------------------------------------------------------------
 
-def solve():
-	
-	
-	print(0)
-	
 def main():
-	t = int(input())
-	for _ in range(1, t+1):
-		solve()
+	ans = 0
+	n = int(input())
+	v = list(map(int, input().split()))
+	
+	
+	print(ans)
 	
 
 #-----------------------------------------------------------------------
@@ -31,7 +29,7 @@ BUFSIZE = 8192
 
 
 class FastIO(IOBase):
-	newlines = 0
+    newlines = 0
 
     def __init__(self, file):
         self._fd = file.fileno()
@@ -98,6 +96,6 @@ input = lambda: sys.stdin.readline().rstrip("\r\n")
 # endregion
 
 if __name__ == "__main__":
-	main()
+    main()
 
 # Lorenzo Fiorini

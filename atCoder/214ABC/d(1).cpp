@@ -14,15 +14,17 @@ typedef vector<vint> vvi;
 typedef map<int,int> mpii;
 typedef set<int> seti;
 typedef multiset<int> mseti;
-#define mk make_pair
 #define pb push_back
 //
 #define por(i, a, b, in) for (int i=a ; i<(b) ; i+=in)
+#define rpor(i, a, b, in) for (int i=a-1 ; i>=(b) ; i-=in)
 #define rep(i, a, b) por(i, a, b, 1)
+#define rrep(i, a, b) rpor(i, a, b, 1)
 #define each(it, mp) for (auto it = mp.begin(); it != mp.end(); it++)
 #define all(c) c.begin(), c.end()
 #define allg(c) all(c), greater<> ()
 #define len(v) (int) v.size()
+#define notin(c, x) ((c).find(x) == (c).end())
 //
 #define show(x) cout << x << "\n";
 #define showp(x, y) cout << x << " " << y << "\n";
@@ -32,14 +34,64 @@ typedef multiset<int> mseti;
 #define showset(it, st) each(it, st) {cout << *it << " ";} cout << "\n";
 #define showmap(it, mp) each(it, mp) {cout << it->ff << " " << it->ss << "\n";} cout << "\n";
 #define precision(d) cout << setprecision(d) << fixed;
-#define ff first
-#define ss second
+#define n first
+#define w second
+
+//set<pii> st;
+//set<pii>::iterator it;
+ll ans = 0;
+
+
+void dfs(vector<vpii> &v, int pos, vpii &mx, int we, vint &vis) {
+	if (vis[pos]) return;
+	vis[pos] = 1;
+	// Weights up to node i
+	ll sum = we;
+	rep (i, 0, len(mx) ) {
+		mx[i].w = max(mx[i].w, we);
+		sum += (ll) mx[i].w;
+	}
+	
+	// sumar 
+	ans += sum;
+	
+	rep (i, 0, len(v[pos])) {
+		int nxt = v[pos][i].n;
+		if (vis[nxt]) continue;
+		
+		mx.pb(v[pos][i]);
+		dfs(v, nxt , mx, v[i][0].w, vis);
+
+	}
+	return;
+}
+
 
 void solve () {
 	int ans = 0;
-	int n;
-	cin >> n;
+	int N;
+	cin >> N;
+	vector<vpii> v(N);
+	rep (i, 0, N-1) {
+		int u, uu, ww;
+		cin >> u >> uu >> ww;
+		u--; uu--;
+		v[u].pb({uu, ww});
+		v[uu].pb({u, ww});
+	}
 	
+	vpii mx;
+	vint vis(N);
+	rep (i, 0, N) {
+		if (len(v[i]) == 1) {
+			vis[i] = true;
+			
+			mx.pb(v[i][0]);
+			dfs(v, v[i][0].n , mx, v[i][0].w, vis);
+			
+			break;
+		}
+	}
 	
 	show(ans);
 }
@@ -48,8 +100,6 @@ int main ()
 {
 	ios::sync_with_stdio(false);
 	cin.tie(0);
-	
-	int t; cin >> t; while (t--)
 	
 	solve();
 	

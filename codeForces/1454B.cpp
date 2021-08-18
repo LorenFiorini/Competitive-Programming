@@ -36,10 +36,23 @@ typedef multiset<int> mseti;
 #define ss second
 
 void solve () {
-	int ans = 0;
+	int ans = -1;
 	int n;
 	cin >> n;
+	//chosen number, vector positions
+	map<int, vint> mp;
+	rep (i, 0, n) {
+		int num;
+		cin >> num;
+		mp[num].pb(i + 1);
+	}
 	
+	each (it, mp) {
+		if (len(it->ss) == 1) {
+			ans = it->ss[0];
+			break;
+		}
+	}
 	
 	show(ans);
 }

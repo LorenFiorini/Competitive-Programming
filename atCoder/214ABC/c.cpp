@@ -6,8 +6,8 @@ using namespace std;
 //
 typedef long long ll;
 typedef pair<int, int> pii;
-typedef vector<int> vint;
-typedef vector<ll> vll;
+typedef vector<ll> vint;
+//typedef vector<ll> vll;
 typedef vector<string> vstr;
 typedef vector<pii> vpii;
 typedef vector<vint> vvi;
@@ -17,12 +17,15 @@ typedef multiset<int> mseti;
 #define mk make_pair
 #define pb push_back
 //
-#define por(i, a, b, in) for (int i=a ; i<(b) ; i+=in)
+#define por(i, a, b, in) for (ll i=a ; i<(b) ; i+=in)
+#define rpor(i, a, b, in) for (int i=a-1 ; i>=(b) ; i-=in)
 #define rep(i, a, b) por(i, a, b, 1)
+#define rrep(i, a, b) rpor(i, a, b, 1)
 #define each(it, mp) for (auto it = mp.begin(); it != mp.end(); it++)
 #define all(c) c.begin(), c.end()
 #define allg(c) all(c), greater<> ()
 #define len(v) (int) v.size()
+#define notin(c, x) ((c).find(x) == (c).end())
 //
 #define show(x) cout << x << "\n";
 #define showp(x, y) cout << x << " " << y << "\n";
@@ -36,20 +39,25 @@ typedef multiset<int> mseti;
 #define ss second
 
 void solve () {
-	int ans = 0;
-	int n;
+	ll n;
 	cin >> n;
+	vint s(n);
+	rep (i, 0, n) cin >> s[i];
+	vint v(n);
+	rep (i, 0, n) cin >> v[i];
+		
+	rep (j, 0, 2 * n) {
+		ll i = j%n;
+		v[(i+1)%n] = min( v[i] + s[i], v[(i+1) % n] );
+	}
 	
-	
-	show(ans);
+	rep (i, 0, n) show(v[i]);
 }
 
 int main () 
 {
 	ios::sync_with_stdio(false);
 	cin.tie(0);
-	
-	int t; cin >> t; while (t--)
 	
 	solve();
 	

@@ -1,16 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define INF (int)1e9
+#define INF (ll)1e18
 #define MOD 1000000007
 #define PI 3.1415926535897932384626433832795
 //
 typedef long long ll;
-typedef pair<int, int> pii;
+typedef pair<ll, ll> pii;
 typedef vector<int> vint;
 typedef vector<ll> vll;
 typedef vector<string> vstr;
 typedef vector<pii> vpii;
-typedef vector<vint> vvi;
+typedef vector<vll> vvi;
 typedef map<int,int> mpii;
 typedef set<int> seti;
 typedef multiset<int> mseti;
@@ -32,16 +32,62 @@ typedef multiset<int> mseti;
 #define showset(it, st) each(it, st) {cout << *it << " ";} cout << "\n";
 #define showmap(it, mp) each(it, mp) {cout << it->ff << " " << it->ss << "\n";} cout << "\n";
 #define precision(d) cout << setprecision(d) << fixed;
-#define ff first
-#define ss second
+#define ci first
+#define co second
+
+ll n, m, k;
+
+void bfs(vll &c, vector<vpii> &v, ll start) {
+	queue<ll> q;
+	q.push(start);
+	
+	while (! q.empty()) {
+		ll i = q.front();
+		q.pop();
+		
+		ll N = len(v[i]);
+		rep (j, 0, N) 
+		{
+			// cost this hospt + cost road
+			ll cost = c[i] + v[i][j].co;
+			// if less than cost there ( cr.ci )
+			if (cost < c[ v[i][j].ci ]) {
+				//update cost
+				c[ v[i][j].ci ] = cost;
+				q.push( v[i][j].ci );
+			}
+		}
+		
+	}
+}
+
 
 void solve () {
-	int ans = 0;
-	int n;
-	cin >> n;
+	cin >> n >> m >> k; 
+	// COST OF TEST 
+	vll c(n, INF);
+	vll start;
+	rep (i, 0, k) {
+		ll city, cost;
+		cin >> city >> cost;
+		c[city-1] = cost;
+		start.pb(city-1);
+	}
+	//ROADS
+	vector<vpii> v(n);
+	rep (i, 0, m) {
+		ll a, b, d;
+		cin >> a >> b >> d;
+		a--; b--;
+		v[a].pb({b, d});
+		v[b].pb({a, d});
+	}
 	
-	
-	show(ans);
+	rep (i, 0, n){
+		bfs(c, v, (ll)i);
+	}
+		
+	showv(c, n);
 }
 
 int main () 

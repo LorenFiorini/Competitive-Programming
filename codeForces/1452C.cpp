@@ -37,9 +37,34 @@ typedef multiset<int> mseti;
 
 void solve () {
 	int ans = 0;
-	int n;
-	cin >> n;
+	string s;
+	cin >> s;
 	
+	int a = 0, b = 0;
+	for (char c : s) {
+		switch (c){
+		case '(':
+			a++;
+			break;
+		case '[':
+			b++;
+			break;
+		case ')':
+			if (a > 0) {
+				a--;
+				ans++;
+			}
+			break;
+		case ']':
+			if (b > 0) {
+				b--;
+				ans++;
+			}
+			break;
+		}
+		a = max(a, 0);
+		b = max(b, 0);
+	}
 	
 	show(ans);
 }

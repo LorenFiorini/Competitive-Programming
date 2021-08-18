@@ -18,11 +18,14 @@ typedef multiset<int> mseti;
 #define pb push_back
 //
 #define por(i, a, b, in) for (int i=a ; i<(b) ; i+=in)
+#define rpor(i, a, b, in) for (int i=a-1 ; i>=(b) ; i-=in)
 #define rep(i, a, b) por(i, a, b, 1)
+#define rrep(i, a, b) rpor(i, a, b, 1)
 #define each(it, mp) for (auto it = mp.begin(); it != mp.end(); it++)
 #define all(c) c.begin(), c.end()
 #define allg(c) all(c), greater<> ()
 #define len(v) (int) v.size()
+#define notin(c, x) ((c).find(x) == (c).end())
 //
 #define show(x) cout << x << "\n";
 #define showp(x, y) cout << x << " " << y << "\n";
@@ -35,13 +38,56 @@ typedef multiset<int> mseti;
 #define ff first
 #define ss second
 
+int n;
+
+void from(int num) {
+	rep (i, 0, n+1) {
+		int a = ((i + num) % (n+1)) + 1;
+		cout << a << " ";
+	}
+	
+	show("");
+}
+
+
 void solve () {
-	int ans = 0;
-	int n;
+	//int ans = -1;
 	cin >> n;
+	vint v(n);
+	rep (i, 0, n) cin >> v[i];
 	
+	rep (i, 1, n) {
+		if (v[i-1] == 0 && v[i] == 1) {
+			rep (j, 0, i) {
+				cout << j+1 << " ";
+			}
+			cout << n+1 << " ";
+			rep (j, i, n) {
+				cout << j+1 << " ";
+			}
+			cout << "\n";
+			return;
+		}
+	}
 	
-	show(ans);
+	if (v[n-1] == 0) {
+		rep (i, 0, n+1) {
+			cout << i+1 << " ";
+		}
+		cout << "\n";
+		return;
+	}
+	
+	if (v[0] == 1) {
+		cout << n+1 << " ";
+		rep (i, 0, n) {
+			cout << i+1 << " ";
+		}
+		cout << "\n";
+		return;
+	}
+	
+	cout << "-1\n";
 }
 
 int main () 

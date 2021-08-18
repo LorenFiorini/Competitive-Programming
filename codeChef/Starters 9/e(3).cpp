@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define INF (int)1e9
-#define MOD 1000000007
+#define mod (ll) 1000000007
 #define PI 3.1415926535897932384626433832795
 //
 typedef long long ll;
@@ -32,26 +32,68 @@ typedef multiset<int> mseti;
 #define showset(it, st) each(it, st) {cout << *it << " ";} cout << "\n";
 #define showmap(it, mp) each(it, mp) {cout << it->ff << " " << it->ss << "\n";} cout << "\n";
 #define precision(d) cout << setprecision(d) << fixed;
-#define ff first
-#define ss second
+#define one first
+#define sz second
 
-void solve () {
-	int ans = 0;
-	int n;
-	cin >> n;
+ll solve (ll ans, ll leng) {
+	ll p = 1;
+	while (--(leng)) {
+		p <<= (ll) 1;
+		p %= mod;
+	}
 	
+	ans *= p;
+	ans %= mod;
 	
-	show(ans);
+	return ans;
 }
+
+
+void fib(int n, mpii &mp) {
+	
+	vector<vll> v(2, vll(2, 1));
+	v[0][0] = 0;
+	mp[0] = 0;
+	mp[1] = 1;
+	rep (i, 2, n+1) {
+		ll ones = v[0][0] + v[0][1];
+		ll sz = v[1][0] + v[1][1];
+		// move to first
+		v[0][0] = v[0][1];
+		v[1][0] = v[1][1];
+		// move to second
+		v[0][1] = ones;
+		v[1][1] = sz;
+		if (mp[i] == -1) {
+			mp[i] = solve(ones, sz);
+		}
+	}
+	return;
+}
+
 
 int main () 
 {
 	ios::sync_with_stdio(false);
 	cin.tie(0);
 	
-	int t; cin >> t; while (t--)
+	int t, mx = 0; 
+	cin >> t;
+	vint nums(t);
+	mpii mp;
+	rep (i, 0, t) {
+		cin >> nums[i];
+		mp[nums[i]] = -1;
+		mx = max(mx, nums[i]);
+	}
 	
-	solve();
+	
+	fib(mx, mp);
+	
+	rep (i, 0, t) {
+		
+		cout << mp[nums[i]] << "\n";
+	}
 	
 	return 0;
 }

@@ -36,10 +36,34 @@ typedef multiset<int> mseti;
 #define ss second
 
 void solve () {
-	int ans = 0;
-	int n;
-	cin >> n;
+	string ans = "Consistent";
+	int n, m, q;
+	cin >> n >> m >> q;
 	
+	vint v(n+1, 0);
+	int tot = 0;
+	while (q--) {
+		char c;
+		int pos;
+		cin >> c >> pos;
+		if (c == '+') {
+			tot++;
+			if (tot > m) 
+				ans = "Inconsistent";
+			if (v[pos] == 1) {
+				ans = "Inconsistent";
+			} else {
+				v[pos] = 1;
+			}			
+		} else {
+			tot--;
+			if (v[pos] == 0) {
+				ans = "Inconsistent";
+			} else {
+				v[pos] = 0;
+			}
+		}		
+	}
 	
 	show(ans);
 }

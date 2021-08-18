@@ -13,16 +13,39 @@ if sys.version_info[0] < 3:
 
 #-----------------------------------------------------------------------
 
-def solve():
-	
-	
-	print(0)
-	
+def fib(n):
+	v = ["0", "1"]
+	for i in range(2, n+1):
+		s = v[i-1] + v[i-2]
+		v.append(s)
+	for num in v:
+		num = list(num)
+	return v
+
+def solve(n, f):
+	mod = 1000000007
+	ans = 0
+	for i in range(1, n+1):
+		m = len(f[i])
+		for j in range(m):
+			if f[i][j] == '1':
+				ans += (m - j)
+		ans %= mod
+		
+		print(ans)
+	print()
 def main():
 	t = int(input())
+	mx = 0 
+	nums = list()
 	for _ in range(1, t+1):
-		solve()
-	
+		n = int(input())
+		mx = max(mx, n)
+		nums.append(n)
+		
+	f = fib(mx)
+	for i in range(t):
+		solve(nums[i], f)
 
 #-----------------------------------------------------------------------
 # region fastio
@@ -31,7 +54,7 @@ BUFSIZE = 8192
 
 
 class FastIO(IOBase):
-	newlines = 0
+    newlines = 0
 
     def __init__(self, file):
         self._fd = file.fileno()
@@ -98,6 +121,6 @@ input = lambda: sys.stdin.readline().rstrip("\r\n")
 # endregion
 
 if __name__ == "__main__":
-	main()
+    main()
 
 # Lorenzo Fiorini

@@ -37,9 +37,10 @@ typedef multiset<int> mseti;
 
 void solve () {
 	int ans = 0;
-	int n;
-	cin >> n;
+	int n, a;
+	cin >> n >> a;
 	
+	ans = ((int) sqrt(n)) * a;
 	
 	show(ans);
 }

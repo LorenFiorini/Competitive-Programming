@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define INF (int)1e9
-#define MOD 1000000007
+#define mod (ll) 1000000007
 #define PI 3.1415926535897932384626433832795
 //
 typedef long long ll;
@@ -35,11 +35,23 @@ typedef multiset<int> mseti;
 #define ff first
 #define ss second
 
-void solve () {
-	int ans = 0;
-	int n;
-	cin >> n;
+void fib(vll &f, vll &sz, int n) {
+	f[1] = 1;
+	rep (i, 2, n+1) {
+		f[i] = f[i-1] + f[i-2];
+		sz[i] = sz[i-1] + sz[i-2];
+	}
+}
+
+void solve (ll ans, ll n) {
+	ll p = 1;
+	while (--n) {
+		p <<= (ll) 1;
+		p %= mod;
+	}
 	
+	ans *= p;
+	ans %= mod;
 	
 	show(ans);
 }
@@ -49,9 +61,21 @@ int main ()
 	ios::sync_with_stdio(false);
 	cin.tie(0);
 	
-	int t; cin >> t; while (t--)
+	int t, mx = 0; 
+	cin >> t;
+	vpii nums(t);
+	rep (i, 0, t) {
+		cin >> nums[i];
+		mx = max(mx, nums[i]);
+	}
 	
-	solve();
+	vll f(mx+1, 0);
+	vll sz(mx+1, 1);
+	fib(f, sz, mx);
+	
+	rep (i, 0, t) {
+		solve(f[nums[i]], sz[nums[i]]);
+	}
 	
 	return 0;
 }
