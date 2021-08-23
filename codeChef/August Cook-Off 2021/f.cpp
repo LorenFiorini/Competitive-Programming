@@ -35,31 +35,45 @@ typedef multiset<int> mseti;
 #define ff first
 #define ss second
 
-
-void solve () {
-	int ans = 0;
-	int n;
-	cin >> n;
+void query(seti &st) {
+	cout << "? " << len(st) << " ";
+	each(it, st) 
+		cout << *it << " ";		
+	cout << endl;
+}
+void solve (int &ok) {
+	int n, q;
+	cin >> n >> q;
+	vint ans(n, 0);
+	seti idx;
+	rep (i,0,n) idx.insert(i+1);
 	
-	
-	
+	int element = 1;
+	int times = 0;
+	while (q--) 
+	{
+		query(idx);
+		cin >> times;
+		
+		
+	}
 	
 	show(ans);
+	cin >> ok;
 }
 
 int main () 
 {
 	ios::sync_with_stdio(false);
 	cin.tie(0);
-	int T; cin >> T;
-	int CASE = 1;
-	while (CASE <= T) {
-		cout << "Case #" << CASE << ": ";
-		solve();
-		CASE++;
+	
+	int t; cin >> t; 
+	int ok = 1;
+	while (t-- && ok == 1) {
+		solve(ok);
 	}
 	
 	return 0;
 }
 
-// Lorenzo
+// Lorenzo Fiorini

@@ -35,31 +35,60 @@ typedef multiset<int> mseti;
 #define ff first
 #define ss second
 
+vint jota;
+
+void jotas() {
+	ll a = 1;
+	ll n = 1;
+	ll inf = 1.01e9;
+	while (a <= inf) {
+		jota.pb((int) a);
+		a += (2 * n) - (ll) 1;
+		n++;
+	}
+	//showv(jota, len(jota));
+}
 
 void solve () {
-	int ans = 0;
-	int n;
-	cin >> n;
+	int k;
+	cin >> k;
 	
+	vint::iterator up = upper_bound(all(jota), k);
 	
+	int c = up - jota.begin() - 1;
+	int r = 0;
+	//cout << jota[c] <<" "<< jota[c+1] << endl;
 	
+	if (jota[c] != k) 
+	{
+		int mid = jota[c] + c;
+		if (mid == k) {
+			r = c;		
+		} else if (mid > k) {
+			// esta en colmuna
+			r = k - jota[c];
+			
+		} else if (mid < k){
+			// esta en row
+			r = c;
+			int col = k - mid;
+			c -= col;
+		}
+	}
 	
-	show(ans);
+	showp(r + 1, c + 1);
 }
 
 int main () 
 {
 	ios::sync_with_stdio(false);
 	cin.tie(0);
-	int T; cin >> T;
-	int CASE = 1;
-	while (CASE <= T) {
-		cout << "Case #" << CASE << ": ";
-		solve();
-		CASE++;
-	}
+	jotas();
+	int t; cin >> t; while (t--)
+	
+	solve();
 	
 	return 0;
 }
 
-// Lorenzo
+// Lorenzo Fiorini

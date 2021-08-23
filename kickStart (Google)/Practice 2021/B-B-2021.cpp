@@ -40,9 +40,48 @@ void solve () {
 	int ans = 0;
 	int n;
 	cin >> n;
+	vint v(n);
+	rep (i, 0, n) cin >> v[i];
 	
+	int d = v[1]-v[0], lst = 0;
+	rep (i, 2, n) {
+		if (v[i] != d + v[i-1]) {
+			int tmp = v[i];	v[i] = v[i-1] + d;
+			int k = i+1;
+			
+			rep (j, i+1, n) {
+				if (v[j] != d + v[j-1]) break;
+				k = j+1;
+			}
+			ans = max(ans, k - lst);
+			
+			v[i] = tmp;
+			if(i+1<n) d = v[i+1] - v[i];
+			lst = i;
+		}
+	}
+	ans = max(ans, n - lst);
 	
+	reverse(all(v));
 	
+	d = v[1]-v[0], lst = 0;
+	rep (i, 2, n) {
+		if (v[i] != d + v[i-1]) {
+			int tmp = v[i];	v[i] = v[i-1] + d;
+			int k = i+1;
+			
+			rep (j, i+1, n) {
+				if (v[j] != d + v[j-1]) break;
+				k = j+1;
+			}
+			ans = max(ans, k - lst);
+			
+			v[i] = tmp;
+			if(i+1<n) d = v[i+1] - v[i];
+			lst = i;
+		}
+	}
+	ans = max(ans, n - lst);
 	
 	show(ans);
 }

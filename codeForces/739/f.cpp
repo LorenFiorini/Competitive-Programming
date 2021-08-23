@@ -35,14 +35,58 @@ typedef multiset<int> mseti;
 #define ff first
 #define ss second
 
+void difdig(ll n, seti &st) {
+	seti dig;
+	while (n > 0) {
+		dig.insert(n % 10);
+		n /= 10;
+	}
+	st.swap(dig);
+}
+
+ll next(ll n, seti &st) {
+	vint v;
+	while (n > 0) {
+		v.pb(n % 10);
+		n /= 10;
+	}
+	reverse(all(v));
+	
+	int sz = len(v);
+	rep (i, 0, sz) {
+		int tmp = v[i];
+		rep (val, v[i]+1, 10) {
+			if (st.find(val) != st.end()) {
+				v[i] = val;
+				break;
+			}
+		}
+		if (tmp != v[i]) break;
+	}
+	
+	ll ans = 0;
+	reverse(all(v));
+	for (auto num : v)  {
+		ans *= 10;
+		ans += (ll)num;
+	}
+	
+	
+	return ans;
+}
 
 void solve () {
-	int ans = 0;
-	int n;
-	cin >> n;
+	ll n, k;
+	cin >> n >> k;
 	
+	ll ans = n;
+	seti st;
+	difdig(ans, st);
 	
-	
+	while (len(st) > k) {
+		ans = next(ans, st);
+		difdig(ans, st);
+	}
 	
 	show(ans);
 }
@@ -51,15 +95,12 @@ int main ()
 {
 	ios::sync_with_stdio(false);
 	cin.tie(0);
-	int T; cin >> T;
-	int CASE = 1;
-	while (CASE <= T) {
-		cout << "Case #" << CASE << ": ";
-		solve();
-		CASE++;
-	}
+	
+	int t; cin >> t; while (t--)
+	
+	solve();
 	
 	return 0;
 }
 
-// Lorenzo
+// Lorenzo Fiorini

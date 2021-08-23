@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <sys/resource.h>
 using namespace std;
 #define INF (int)1e9
 #define MOD 1000000007
@@ -35,13 +36,10 @@ typedef multiset<int> mseti;
 #define ff first
 #define ss second
 
-
 void solve () {
 	int ans = 0;
 	int n;
 	cin >> n;
-	
-	
 	
 	
 	show(ans);
@@ -51,15 +49,17 @@ int main ()
 {
 	ios::sync_with_stdio(false);
 	cin.tie(0);
-	int T; cin >> T;
-	int CASE = 1;
-	while (CASE <= T) {
-		cout << "Case #" << CASE << ": ";
-		solve();
-		CASE++;
-	}
+	
+	rlimit R;
+	getrlimit(RLIMIT_STACK, &R);
+	R.rlim_cur = R.rlim_max;
+	setrlimit(RLIMIT_STACK, &R);
+	
+	int t; cin >> t; while (t--)
+	
+	solve();
 	
 	return 0;
 }
 
-// Lorenzo
+// Lorenzo Fiorini

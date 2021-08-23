@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+//#include <sys/resource.h>
 using namespace std;
 #define INF (int)1e9
 #define MOD 1000000007
@@ -6,13 +7,13 @@ using namespace std;
 //
 typedef long long ll;
 typedef pair<int, int> pii;
-typedef vector<int> vint;
+typedef vector<ll> vint;
 typedef vector<ll> vll;
 typedef vector<string> vstr;
 typedef vector<pii> vpii;
 typedef vector<vint> vvi;
 typedef map<int,int> mpii;
-typedef set<int> seti;
+typedef set<ll> seti;
 typedef multiset<int> mseti;
 #define mk make_pair
 #define pb push_back
@@ -35,14 +36,38 @@ typedef multiset<int> mseti;
 #define ff first
 #define ss second
 
+bool inside(seti &st, ll num) {
+	// TRUE if inside
+	return st.find(num) != st.end();
+}
 
 void solve () {
-	int ans = 0;
-	int n;
+	ll ans = 1;
+	ll n;
 	cin >> n;
+	vint v(n);
+	rep (i,0,n) cin >> v[i];
 	
+	seti nums(all(v));
+	sort(all(v));	
+	// n == 1
+	if (n==1) {show(1);return;}
+
+	rep (i, 0, n-1) {
+		if (!inside(nums, v[i] * v[n-1])) {
+			ans = 0;
+			break;
+		}
+	}
 	
-	
+	if (ans){
+	rep (i, 1, n) {
+		if (!inside(nums, v[i] * v[0])) {
+			ans = 0;
+			break;
+		}
+	} 
+}
 	
 	show(ans);
 }
@@ -51,15 +76,17 @@ int main ()
 {
 	ios::sync_with_stdio(false);
 	cin.tie(0);
-	int T; cin >> T;
-	int CASE = 1;
-	while (CASE <= T) {
-		cout << "Case #" << CASE << ": ";
-		solve();
-		CASE++;
-	}
+	/*
+	rlimit R;
+	getrlimit(RLIMIT_STACK, &R);
+	R.rlim_cur = R.rlim_max;
+	setrlimit(RLIMIT_STACK, &R);*/
+	
+	int t; cin >> t; while (t--)
+	
+	solve();
 	
 	return 0;
 }
 
-// Lorenzo
+// Lorenzo Fiorini

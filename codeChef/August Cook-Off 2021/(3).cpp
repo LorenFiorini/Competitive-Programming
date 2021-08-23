@@ -35,31 +35,43 @@ typedef multiset<int> mseti;
 #define ff first
 #define ss second
 
-
 void solve () {
-	int ans = 0;
 	int n;
 	cin >> n;
+	int m = n / 2;
+	vint v(m, 0);
 	
+if (m > 0) {
+	rep (i, 0, m/2 + 1) {
+		v[i] = i+2;
+	}
+	rep (i, 0, m/2) {
+		if (v[m-1-i] != 0) break;
+		v[m-1-i] = i+2;
+	}
+}
 	
-	
-	
-	show(ans);
+	// RESULT
+	rep (i, 0, n) {
+		if (i % 2 == 0) {
+			cout << "1 ";
+		} else {
+			cout << v[i/2] << " ";
+		}
+	}
+	cout << "\n";
 }
 
 int main () 
 {
 	ios::sync_with_stdio(false);
 	cin.tie(0);
-	int T; cin >> T;
-	int CASE = 1;
-	while (CASE <= T) {
-		cout << "Case #" << CASE << ": ";
-		solve();
-		CASE++;
-	}
+	
+	int t; cin >> t; while (t--)
+	
+	solve();
 	
 	return 0;
 }
 
-// Lorenzo
+// Lorenzo Fiorini

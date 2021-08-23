@@ -38,9 +38,10 @@ typedef multiset<int> mseti;
 
 void solve () {
 	int ans = 0;
-	int n;
-	cin >> n;
-	
+	int R, C, k;
+	cin >> R >> C >> k;
+	int r1,r2,c1,c2;
+	cin >> r1 >> c1 >> r2 >> c2;
 	
 	
 	

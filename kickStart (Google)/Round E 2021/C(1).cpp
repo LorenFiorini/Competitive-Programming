@@ -35,16 +35,69 @@ typedef multiset<int> mseti;
 #define ff first
 #define ss second
 
+int n, m;
+
+bool valid(vstr &v, int r, int c) {
+	if (r < 0 || c < 0 || r >= n || c >= m) return false;
+	return (v[r][c] != '#');
+}
+
+void corners(vstr &v, vvi &vis, int r, int c) {
+	if (vis[r][c]) return;
+	vis[r][c] = 1;
+	
+	char ch = v[r][c];	
+	//to up and down
+	int u = r, d = r;
+	do {	u--;	} while (valid(v, u, c));	u++;
+	do {	d++;	} while (valid(v, d, c));	d--;
+	
+	int pos = d - (r - u);
+	if (pos != r && v[r][c] != v[pos][c]) {
+		v[pos][c] = ch;
+		corners(v, vis, pos, c);
+	}
+	
+	
+	//to left and right
+	int le = c, ri = c;
+	do {	le--;	} while (valid(v, r, le));	le++;
+	do {	ri++;	} while (valid(v, r, ri));	ri--;
+	
+	pos = ri - (c-le);
+	if (pos != c && v[r][c] != v[r][pos]) {
+		v[r][pos] = ch;
+		corners(v, vis, r, pos);
+	}
+	
+	return;
+}
 
 void solve () {
+	cin >> n >> m;
+	vstr v(n);
+	rep (i, 0, n) cin >> v[i];
+	vstr cpy(all(v));
+	
+	vvi vis(n, vint(m, false));
+	rep (i, 0, n) {
+		rep (j,0,m) {
+			if (v[i][j] >= 'A' && v[i][j] <= 'Z' && vis[i][j] == false) {
+				corners(v, vis, i, j);
+			}
+		}
+ 	}
+
+	// count
 	int ans = 0;
-	int n;
-	cin >> n;
-	
-	
-	
+	rep (i, 0, n) {
+		rep (j, 0, m) {
+			ans += (v[i][j] != cpy[i][j]);
+		}
+ 	}
 	
 	show(ans);
+	rep (i, 0, n) show(v[i]);
 }
 
 int main () 

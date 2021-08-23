@@ -37,13 +37,23 @@ typedef multiset<int> mseti;
 
 
 void solve () {
-	int ans = 0;
 	int n;
 	cin >> n;
+	mpii mp;
+	rep (i,0,n) {
+		int num;
+		cin >> num;
+		mp[num]++;
+	}
 	
+	if (n <= 2) {show(0);return;}
 	
+	int mx = 2;
+	each (it, mp) {
+		mx = max(mx, it->ss);
+	}
 	
-	
+	int ans = n - mx;
 	show(ans);
 }
 
@@ -51,15 +61,12 @@ int main ()
 {
 	ios::sync_with_stdio(false);
 	cin.tie(0);
-	int T; cin >> T;
-	int CASE = 1;
-	while (CASE <= T) {
-		cout << "Case #" << CASE << ": ";
-		solve();
-		CASE++;
-	}
+	
+	int t; cin >> t; while (t--)
+	
+	solve();
 	
 	return 0;
 }
 
-// Lorenzo
+// Lorenzo Fiorini

@@ -35,16 +35,78 @@ typedef multiset<int> mseti;
 #define ff first
 #define ss second
 
+int n, m;
+
+bool valid(vstr &v, int r, int c) {
+	if (r < 0 || c < 0 || r >= n || c >= m) return false;
+	return (v[r][c] != '#');
+}
+
+bool corners(vstr &v, int r, int c) {
+	char ch = v[r][c];
+	bool chan = 0;
+	
+	//to up and down
+	int u = r, d = r;
+	do {
+		u--;
+	} while (valid(v, u, c));
+	u++;
+	do {
+		d++;
+	} while (valid(v, d, c));
+	d--;
+	
+	int pos = d - (r - u);
+	if (pos != r && v[r][c]!=v[pos][c]) chan=1;
+	v[pos][c] = ch;
+	
+	//to left and right
+	int le = c, ri = c;
+	do {
+		le--;
+	} while (valid(v, r, le));
+	le++;
+	do {
+		ri++;
+	} while (valid(v, r, ri));
+	ri--;
+	
+	pos = ri - (c-le);
+	if (pos != c && v[r][c]!=v[r][pos]) chan=1;
+	v[r][pos] = ch;
+	
+	return chan;
+}
 
 void solve () {
+	cin >> n >> m;
+	vstr v(n);
+	rep (i, 0, n) cin >> v[i];
+	vstr cpy(all(v));
+	
+	bool change = 1;
+while (change){
+	change = 0;
+	
+	rep (i, 0, n) {
+		rep (j,0,m) {
+			if (v[i][j] >= 'A' && v[i][j] <= 'Z') {
+				change |= corners(v, i, j);
+			}
+		}
+ 	}
+}
+	
 	int ans = 0;
-	int n;
-	cin >> n;
-	
-	
-	
+	rep (i, 0, n) {
+		rep (j, 0, m) {
+			ans += (v[i][j] != cpy[i][j]);
+		}
+ 	}
 	
 	show(ans);
+	rep (i, 0, n) show(v[i]);
 }
 
 int main () 

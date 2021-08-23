@@ -35,16 +35,50 @@ typedef multiset<int> mseti;
 #define ff first
 #define ss second
 
+bool help(vector<pair<int, char>> &v, string &s, int n) {
+	map<char, int> mp;
+	rep (i, 0, n) {
+		mp[s[i]]++;
+	}
+	// number left, char
+	each(it, mp) {
+		if (it->ss * 2 > n) {
+			return true;
+		}
+		v.pb( {it->ss, it->ff} );
+	}
+	return false;
+}
+
 
 void solve () {
-	int ans = 0;
-	int n;
-	cin >> n;
+	string s;
+	cin >> s;
+	int n = len(s);
+	
+	vector<pair<int, char>> v;
+	bool imp = help(v, s, n);
+	if (imp) {show("IMPOSSIBLE");	return;	}
 	
 	
+	int m = len(v);
+	sort(allg(v));
 	
+	string str = s;
+	rep (i, 0, n) {
+		rep (j, 0, m) {
+			if (v[j].ff > 0 && v[j].ss != s[i]) 
+			{
+				v[j].ff = v[j].ff - 1;
+				str[i] = v[j].ss;
+				if (j+1<m && v[j].ff < v[j+1].ff) 
+					{sort(allg(v));	}
+				break;
+			}
+		}
+	}
 	
-	show(ans);
+	show(str);
 }
 
 int main () 

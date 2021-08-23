@@ -37,14 +37,18 @@ typedef multiset<int> mseti;
 
 
 void solve () {
-	int ans = 0;
 	int n;
 	cin >> n;
+	string s;
+	cin >> s;
 	
+	vint v(n, 1);
 	
+	rep (i, 1, n) {
+		if (s[i-1] < s[i]) v[i] = v[i-1] + 1; 
+	}
 	
-	
-	show(ans);
+	showv(v, n);
 }
 
 int main () 

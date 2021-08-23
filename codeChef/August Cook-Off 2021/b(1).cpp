@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+//#include <sys/resource.h>
 using namespace std;
 #define INF (int)1e9
 #define MOD 1000000007
@@ -6,13 +7,13 @@ using namespace std;
 //
 typedef long long ll;
 typedef pair<int, int> pii;
-typedef vector<int> vint;
+typedef vector<ll> vint;
 typedef vector<ll> vll;
 typedef vector<string> vstr;
 typedef vector<pii> vpii;
 typedef vector<vint> vvi;
 typedef map<int,int> mpii;
-typedef set<int> seti;
+typedef set<ll> seti;
 typedef multiset<int> mseti;
 #define mk make_pair
 #define pb push_back
@@ -36,13 +37,27 @@ typedef multiset<int> mseti;
 #define ss second
 
 
+
 void solve () {
-	int ans = 0;
-	int n;
+	int ans = 1;
+	ll n;
 	cin >> n;
+	int t = 1;
+	mpii mp;
+	rep (i,0,n) {
+		int a;
+		cin >> a;
+		mp[a]++;
+		if (a!=0) t*=a;
+	}
 	
+	if (mp.find(0) != mp.end()) {
+		if (mp[0] < n && mp.find(t) == mp.end()) ans = 0;
+	}
 	
-	
+	each (it, mp) {
+		if (abs(it->ff) > 1 && it->ss > 1) ans = 0; 
+	}
 	
 	show(ans);
 }
@@ -51,15 +66,17 @@ int main ()
 {
 	ios::sync_with_stdio(false);
 	cin.tie(0);
-	int T; cin >> T;
-	int CASE = 1;
-	while (CASE <= T) {
-		cout << "Case #" << CASE << ": ";
-		solve();
-		CASE++;
-	}
+	/*
+	rlimit R;
+	getrlimit(RLIMIT_STACK, &R);
+	R.rlim_cur = R.rlim_max;
+	setrlimit(RLIMIT_STACK, &R);*/
+	
+	int t; cin >> t; while (t--)
+	
+	solve();
 	
 	return 0;
 }
 
-// Lorenzo
+// Lorenzo Fiorini

@@ -26,7 +26,7 @@ typedef multiset<int> mseti;
 //
 #define show(x) cout << x << "\n";
 #define showp(x, y) cout << x << " " << y << "\n";
-#define showv(v, n) rep(i, 0, n) {cout << v[i] << " ";} cout << "\n";
+#define showv(v, n) rep(i, 0, n) {cout << v[i];} cout << "\n";
 #define showvp(v, n) rep(i, 0, n) {showp(v[i].ff, v[i].ss);}
 #define showvv(vv, n, m) rep(r, 0, n) {showv(vv[r], m);}
 #define showset(it, st) each(it, st) {cout << *it << " ";} cout << "\n";
@@ -35,31 +35,50 @@ typedef multiset<int> mseti;
 #define ff first
 #define ss second
 
+void next(vint &v, int n) {
+	int carry = 1;
+	for (int i = n-1; i >= 0 && carry; i--) {
+		v[i] += carry;
+		carry = 0;
+		if (v[i] > 1) {
+			v[i] = 0;
+			carry = 1;
+		}
+	}
+}
 
 void solve () {
-	int ans = 0;
 	int n;
 	cin >> n;
+	vvi v(n, vint (n));
+	rep (i,0,n) {
+		string str;
+		cin >> str;
+		rep (j,0,n) {
+			v[i][j] = str[j] - '0';
+		}
+	}
 	
+	set<vint> st(all(v));
+	vint ans(n, 0);
 	
+	while (st.find(ans) != st.end()) {
+		next(ans, n);
+	}
 	
-	
-	show(ans);
+	showv(ans, n);
 }
 
 int main () 
 {
 	ios::sync_with_stdio(false);
 	cin.tie(0);
-	int T; cin >> T;
-	int CASE = 1;
-	while (CASE <= T) {
-		cout << "Case #" << CASE << ": ";
-		solve();
-		CASE++;
-	}
+	
+	int t; cin >> t; while (t--)
+	
+	solve();
 	
 	return 0;
 }
 
-// Lorenzo
+// Lorenzo Fiorini

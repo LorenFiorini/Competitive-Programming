@@ -35,31 +35,71 @@ typedef multiset<int> mseti;
 #define ff first
 #define ss second
 
+ll ans, n, x;
+map<pii, ll> mp;
+
+
+ll dfs(vll &v, int l, int r, ll cost, ll k) {
+
+	// END conditions
+	if (l == r) {
+		cost += v[r];
+		ans = min(ans, cost);
+		if (mp.find({l, r}) == mp.end()) 
+			mp[{l, r}] = cost;
+		else
+			mp[{l, r}] = min(mp[{l, r}], cost);
+			
+		return cost;
+	} else if (l > r) {
+		ans = min(ans, cost);
+		if (mp.find({l, r}) == mp.end()) mp[{l, r}] = cost;
+		else mp[{l, r}] = min(mp[{l, r}], cost);
+		return cost;
+	}
+	
+	ll best = 1e18;
+	// Take out both
+	if (k > 0 && v[l]+v[r] <= x) {
+		best = min(dfs(v, l+1, r-1, cost + x, k-1), best);
+	}
+	
+	// LEFT
+	best = min(dfs(v, l+1, r, cost + v[l], k), best);
+	// RIGTH
+	best = min(dfs(v, l, r-1, cost + v[r], k), best);
+	
+	if (mp.find({l, r}) == mp.end()) mp[{l, r}] = cost;
+	else mp[{l, r}] = min(mp[{l, r}], cost);
+	
+	return best;
+}
 
 void solve () {
-	int ans = 0;
-	int n;
-	cin >> n;
+	ans = 1e18;
+	mp.clear();
+	ll n, k, x;
+	cin >> n >> k >> x;
+	vll v(n);
+	rep (i,0,n) cin >> v[i];
 	
+	int l = 0;
+	int r = n-1;
+	dfs(v, l, r, 0, k);
 	
-	
-	
-	show(ans);
+	show(ans / 2);
 }
 
 int main () 
 {
 	ios::sync_with_stdio(false);
 	cin.tie(0);
-	int T; cin >> T;
-	int CASE = 1;
-	while (CASE <= T) {
-		cout << "Case #" << CASE << ": ";
-		solve();
-		CASE++;
-	}
+	
+	int t; cin >> t; while (t--)
+	
+	solve();
 	
 	return 0;
 }
 
-// Lorenzo
+// Lorenzo Fiorini

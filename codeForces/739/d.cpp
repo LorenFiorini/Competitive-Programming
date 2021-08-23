@@ -35,13 +35,30 @@ typedef multiset<int> mseti;
 #define ff first
 #define ss second
 
+set<string> st;
+void powers() {
+	for (ll i = 1; i < 2e9; i *= 2) {
+		string s = to_string(i);
+		st.insert(s);
+	}
+}
+
 
 void solve () {
-	int ans = 0;
-	int n;
-	cin >> n;
+	int N;
+	cin >> N;
+	string n = to_string(N);
+	if (st.find(n) != st.end) {show(0); return;}
 	
+	int ans = len(n) + 1;
 	
+	// generate substring
+	rep (i, 0, n) {
+		vint vis(len(n), 0);
+		vis[i] = 1;
+		string s = n[i];
+		dfs(s, n, vis);
+	}
 	
 	
 	show(ans);
@@ -51,15 +68,12 @@ int main ()
 {
 	ios::sync_with_stdio(false);
 	cin.tie(0);
-	int T; cin >> T;
-	int CASE = 1;
-	while (CASE <= T) {
-		cout << "Case #" << CASE << ": ";
-		solve();
-		CASE++;
-	}
+	powers();
+	int t; cin >> t; while (t--)
+	
+	solve();
 	
 	return 0;
 }
 
-// Lorenzo
+// Lorenzo Fiorini

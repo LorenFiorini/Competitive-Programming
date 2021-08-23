@@ -35,15 +35,64 @@ typedef multiset<int> mseti;
 #define ff first
 #define ss second
 
+// < powers of 2 (or their prefixes) , numbers to add on the right >
+map<string, int> mp;
+
+void powers() {
+	// First add all powers of two
+	for (ll i = 1; i < 1e15; i *= 2) {
+		string s = to_string(i);
+		mp.insert({s, 0});
+	}
+	// then add prefixes 
+	each (it, mp) {
+		string s = it->ff;
+		int N = len(it->ff);
+		rep (i, 1, N) 
+		{
+			string tmp = s.substr(0, i);
+			int changes = min(N-i, i+1);
+			auto it2 = mp.find(tmp);
+			
+			if (it2 == mp.end()) {
+				mp.insert({tmp, changes});
+			} else {
+				it2->ss = min(it2->ss, changes);
+			}
+		}
+	}	
+}
 
 void solve () {
-	int ans = 0;
-	int n;
-	cin >> n;
+	string n;
+	cin >> n; 
+	int ans = len(n) + 1;
 	
+	// generate all substrings of N
+	set<string> sub; 
+	sub.insert("");	
+	rep (i, 0, len(n)) 
+	{
+		// TODO: modify this to search in a map
+		string s{n[i]};	// <== amazing way to convert char int to string
+		vector<string> add;
+		for (auto it = sub.begin(); it != sub.end(); it++) 
+		{
+			string tmp = *it + s;
+			if (mp.find(tmp) != mp.end()) {				
+				//int changes = min(len(n) - len(tmp) + mp[tmp], len(tmp) + 1);
+				//mp[tmp] = min(mp[tmp], changes);
+				ans = min(ans, len(n) - len(tmp) + mp[tmp]);
+			} else {
+				mp[tmp] = len(tmp)+1;
+			}
+			add.pb(tmp);
+		}
+		
+		for (string str : add) sub.insert(str);
+	}
 	
-	
-	
+	mp[n] = ans;
 	show(ans);
 }
 
@@ -51,15 +100,12 @@ int main ()
 {
 	ios::sync_with_stdio(false);
 	cin.tie(0);
-	int T; cin >> T;
-	int CASE = 1;
-	while (CASE <= T) {
-		cout << "Case #" << CASE << ": ";
-		solve();
-		CASE++;
-	}
+	powers();
+	int t; cin >> t; while (t--)
+	
+	solve();
 	
 	return 0;
 }
 
-// Lorenzo
+// Lorenzo Fiorini

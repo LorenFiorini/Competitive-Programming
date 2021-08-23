@@ -35,16 +35,51 @@ typedef multiset<int> mseti;
 #define ff first
 #define ss second
 
+bool help(priority_queue<pair<int, char>> &v, string &s, int n) {
+	map<char, int> mp;
+	rep (i, 0, n) {
+		mp[s[i]]++;
+	}
+	// number left, char
+	each(it, mp) {
+		if (it->ss *2 > n) {
+			return true;
+		}
+		v.push( {it->ss, it->ff} );
+	}
+	return false;
+}
 
 void solve () {
-	int ans = 0;
-	int n;
-	cin >> n;
+	string s;
+	cin >> s;
+	int n = len(s);
+	
+	priority_queue<pair<int, char>> v;
+	bool imp = help(v, s, n);
+	if (imp) {show("IMPOSSIBLE");	return;	}
 	
 	
+	// make wheneevr possible
+	string str;
+	rep (i, 0, n) {
+		vector<pair<int, char>> tmp;
+		pair<int, char> p;
+		do{
+			p = v.top();
+			v.pop();
+			tmp.pb(p);		
+		} while (p.ss == s[i]);
+		
+		tmp[len(tmp) - 1].ff -= 1;
+		str.pb(p.ss); // ADD
+		
+		for (pair<int, char> par : tmp) {
+			if (par.ff > 0) v.push(par);
+		}
+	}
 	
-	
-	show(ans);
+	show(str);
 }
 
 int main () 
