@@ -1,0 +1,113 @@
+\documentclass[12pt]{article}
+\usepackage{colortbl}
+\usepackage{setspace}
+\usepackage{breqn}
+\author{Fiorini Heredia Lorenzo Andrés}
+\title{The Zermelo-Fraenkel axioms of set theory}
+\date{2021.09.17}
+
+\begin{document}
+\maketitle
+\setstretch{1.1}
+
+\begin{enumerate}
+
+% 1 Extensionality
+\item {\color{blue}Axiom of Extensionality} If $X$ and $Y$ have the same elements, then $X = Y$.
+\begin{equation}
+	\forall u   \hspace{2pt}  
+	(u \in X \equiv i \in Y)  
+	\Rightarrow X = Y
+\end{equation}
+
+% 2 Unordered Pair
+\item {\color{blue}Axiom of the Unordered Pair} For any $a$ and $b$ there exists a set $(a, b)$ that contains exactly $a$ and $b$.
+\begin{equation}
+	\forall \hspace{1pt} a \hspace{2pt}  
+	\forall \hspace{1pt} b  \hspace{2pt}  
+	\exists \hspace{1pt} c  \hspace{2pt}  
+	\forall \hspace{1pt} x   \hspace{2pt}  
+	(x \in c \equiv (x = a \lor x = b))
+\end{equation}
+
+% 3 Subsets
+\item {\color{blue}Axiom of Subsets}  if $\varphi$ is a property with parameter $p$, the for any $X$ and $p$ there exists a set $Y = \{u \in X: \varphi(u, p)\}$ that contains all those $u \in X$ that have the property $\varphi$.
+\begin{equation}
+	\forall \hspace{1pt} X  \hspace{2pt}  
+	\forall \hspace{1pt} p  \hspace{2pt}  
+	\exists \hspace{1pt} Y  \hspace{2pt}  
+	\forall \hspace{1pt} u   \hspace{2pt}  
+	(u \in Y \equiv (u \in X \land x = b))	
+\end{equation}
+
+% 4 Sum Set
+\item {\color{blue}Axiom of Sum Set} For any $X$ there exists a set $Y = {\cup} X$, the union of all elements of $X$.
+\begin{equation}
+	\forall \hspace{1pt} X  \hspace{2pt}  
+	\exists \hspace{1pt} Y  \hspace{2pt}  
+	\forall \hspace{1pt} u   \hspace{2pt}  
+	(u \in Y \equiv \exists \hspace{1pt} z \hspace{2pt}  (z \in X \land \varphi (u, p)))	
+\end{equation}
+
+
+% 5 Power Set
+\item {\color{blue}Axiom of Power Set} For any $X$ there exists a set $Y = P (X)$, the set of all subsets of $X$.
+\begin{equation}
+	\forall \hspace{1pt} X  \hspace{2pt}  
+	\exists \hspace{1pt} Y  \hspace{2pt}  
+	\forall \hspace{1pt} u   \hspace{2pt}  
+	(u \in Y \equiv u \subseteq X)	
+\end{equation}
+
+
+% 6 Infinity
+\item {\color{blue}Axiom of Infinity} There exists an infinite set.
+\begin{equation}
+	\exists \hspace{1pt} S \hspace{2pt}  
+	[\O \in S \land (\forall \hspace{1pt} x\in S) 
+	[x \cup \{x\} \in S]]
+\end{equation}
+
+
+% 7 Replacement
+\item {\color{blue}Axiom of Replacement} If $F$ is a function, then for any $X$ there exists a set $Y = F[X] = \{F(x): x \in X\}$.
+\begin{equation}
+\begin{split}
+	\forall \hspace{1pt} x  \hspace{2pt}  
+	\forall \hspace{1pt} y  \hspace{2pt}  
+	\forall \hspace{1pt} z  \hspace{2pt}  
+	[\varphi (x, y, p) \land \varphi (x, z, p) \Rightarrow y = z] 
+	\\ \Rightarrow
+	\forall \hspace{1pt} X  \hspace{2pt}  
+	\exists \hspace{1pt} Y  \hspace{2pt}  
+	\forall \hspace{1pt} y  \hspace{2pt}  
+	[y \in Y \equiv \exists \hspace{1pt} x \in X \varphi (x, y, p)]
+\end{split}
+\end{equation}
+
+
+% 8 Foundations
+\item {\color{blue}Axiom of Foundations} Every nonempty set has an $\in$-minimal element.
+\begin{equation}
+	\exists \hspace{1pt} S \hspace{2pt}  
+	[ S \neq \O \Rightarrow 
+	(\exists \hspace{1pt} x  \in S)
+	\hspace{2pt}  S  \cap x = \O ]
+\end{equation}
+
+
+% 9 Choice
+\item {\color{blue}Axiom of Choice}  Every family of nonempty sets has a choice function.
+\begin{equation}
+	\forall x  \in a \hspace{3pt}  
+	\exists \hspace{1pt} A(x,y) \Rightarrow 
+	\exists \hspace{1pt} y  \hspace{2pt}  
+	\forall \hspace{1pt} x \hspace{2pt} 
+	\in a A(x, y(x))
+\end{equation}
+
+\end{enumerate}
+
+
+
+\end{document}
