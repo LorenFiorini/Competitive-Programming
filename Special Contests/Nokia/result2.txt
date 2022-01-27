@@ -1,0 +1,21 @@
+
+	Below their boundaries
+
+In terms of CPU:
+ kubectl-pod-2
+ kubectl-pod-3
+ kubectl-pod-4
+ kubectl-pod-5
+
+In terms of memory:
+ kubectl-pod-3
+ kubectl-pod-4
+ kubectl-pod-5
+
+
+	Above their boundaries
+
+In terms of CPU:
+ kubectl-pod-1
+
+In terms of memory:
