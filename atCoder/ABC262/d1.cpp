@@ -17,7 +17,7 @@ typedef multiset<int> mseti;
 #define mk make_pair
 #define pb push_back
 //
-#define por(i, a, b, in) for (int i=a ; i<(b) ; i+=in)
+#define por(i, a, b, in) for (ll i=a ; i<(b) ; i+=in)
 #define rep(i, a, b) por(i, a, b, 1)
 #define each(it, mp) for (auto it = mp.begin(); it != mp.end(); it++)
 #define all(c) c.begin(), c.end()
@@ -38,7 +38,7 @@ typedef multiset<int> mseti;
 ll mod = 998244353;
 
 
-ll binomialCoeff(ll n, ll k) {
+ll binC(ll n, ll k) {
     ll res = 1;
     if (k > n - k) k = n - k;
  
@@ -67,11 +67,34 @@ void solve () {
 		//showv(res, M);
 		
 		rep(cla, 0, M) {
-			if (res[cla] >= M) {
-				ll num = binomialCoeff(res[cla], M);
+			ll tem = (cla * M) % M; 
+			if (tem == 0 && res[cla] >= M) {
+				ll num = binC(res[cla], M);
 				ans += num;
 				ans %= mod;
 				//showp(cla, num);
+			}
+		}
+		if (M % 2 == 0) {
+			ll Mi = M / 2;
+			rep(cla, 1, M/2) {
+				if (res[cla] >= Mi && res[M-cla] >= Mi) {
+					ll num = binC(res[cla], Mi) * binC(res[M-cla], Mi);
+					ans += num;
+					ans %= mod;
+					//showp(cla, num);
+				}
+			}
+		} else if (res[1] > 0) {
+			ll Mi = M / 2;
+			rep(cla, 1, Mi) {
+				//if (cla + 1 == M - cla) break;
+				if (res[cla+1] >= Mi && res[M-cla] >= Mi) {
+					ll num = binC(res[cla+1], Mi) * binC(res[M-cla], Mi);
+					ans += num;
+					ans %= mod;
+					//showp(cla, num);
+				}
 			}
 		}
 	}

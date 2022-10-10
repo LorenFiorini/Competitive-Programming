@@ -6,7 +6,7 @@ using namespace std;
 //
 typedef long long ll;
 typedef pair<int, int> pii;
-typedef vector<ll> vint;
+typedef vector<int> vint;
 typedef vector<ll> vll;
 typedef vector<string> vstr;
 typedef vector<pii> vpii;
@@ -35,48 +35,36 @@ typedef multiset<int> mseti;
 #define ff first
 #define ss second
 
-ll mod = 998244353;
-
-
-ll binomialCoeff(ll n, ll k) {
-    ll res = 1;
-    if (k > n - k) k = n - k;
- 
-    for (ll i = 0; i < k; ++i) {
-        res *= (n - i);
-        res /= (i + 1);
-        res %= mod;
-    }
-    return res;
-}
 
 void solve () {
-	ll ans = 0;
-	ll n;
-	cin >> n;
-	vint v(n);
-	rep(i, 0, n) cin >> v[i];
-	ans = n;
+	int n, m, p, k;
+	cin >> n >> m;
+	vvi v(n, vint(n));
 
-	//vint ma(n);
-	rep(M, 2, n+1) {
-		vint res(M, 0);
-		rep(i, 0, n) {
-			res[v[i] % M]++;  
+	rep (row, 0, m) {
+		cin >> k;
+		vint party(k);
+		rep (j, 0, k) {
+			cin >> party[j];
+			party[j]--;
 		}
-		//showv(res, M);
-		
-		rep(cla, 0, M) {
-			if (res[cla] >= M) {
-				ll num = binomialCoeff(res[cla], M);
-				ans += num;
-				ans %= mod;
-				//showp(cla, num);
+
+		rep(i, 0, k) {
+			rep(j, 0, k) {
+				v[party[i]][party[j]] = 1;
 			}
 		}
 	}
 
-	show(ans);
+	rep(i, 0, n) {
+		rep(j, 0, n) {
+			if (!v[i][j]) {
+				show("No");
+				return;
+			}
+		}
+	}
+	show("Yes");
 }
 
 int main () 

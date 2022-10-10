@@ -35,43 +35,36 @@ typedef multiset<int> mseti;
 #define ff first
 #define ss second
 
-ll mod = 998244353;
-
-
-ll binomialCoeff(ll n, ll k) {
-    ll res = 1;
-    if (k > n - k) k = n - k;
- 
-    for (ll i = 0; i < k; ++i) {
-        res *= (n - i);
-        res /= (i + 1);
-        res %= mod;
-    }
-    return res;
-}
 
 void solve () {
 	ll ans = 0;
 	ll n;
 	cin >> n;
 	vint v(n);
-	rep(i, 0, n) cin >> v[i];
-	ans = n;
+	rep (i, 0, n) cin >> v[i];
+	sort(allg(v));
 
-	//vint ma(n);
-	rep(M, 2, n+1) {
-		vint res(M, 0);
-		rep(i, 0, n) {
-			res[v[i] % M]++;  
-		}
-		//showv(res, M);
-		
-		rep(cla, 0, M) {
-			if (res[cla] >= M) {
-				ll num = binomialCoeff(res[cla], M);
-				ans += num;
-				ans %= mod;
-				//showp(cla, num);
+	if (n == 2) {
+		show(-1);
+		return;
+	}
+
+	ll N = 0;
+	ll cnt[2] = {0, 0};
+	while (N < n) {
+		cnt[v[N] % 2]++;
+		N++;
+		if (cnt[0] > 1 && cnt[1] > 1) break;
+	}
+	
+	rep (i, 0, N) {
+		rep (j, i + 1, N) {
+			if (v[i] + v[j] > ans) {
+				if ((v[i] + v[j]) % 2 == 0) {
+					ans = (v[i] + v[j]);
+				}
+			} else {
+				break;
 			}
 		}
 	}

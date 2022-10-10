@@ -35,11 +35,35 @@ typedef multiset<int> mseti;
 #define ff first
 #define ss second
 
+
+void dfs(vvi &v, int n, int &ans, int pos, int C, int first) {
+
+	for (int nxt: v[pos]) {
+		if (C < 2 && nxt > pos) {
+			dfs(v, n, ans, nxt, C + 1, first);
+		} else if (C == 2 && nxt == first) {
+			ans++;
+		}
+	}
+}
+
+
 void solve () {
 	int ans = 0;
-	int n;
-	cin >> n;
+	int n, m;
+	cin >> n >> m;
+	vvi v(n);
+
+	int a, b;
+	rep (i, 0, m) {
+		cin >> a >> b;
+		v[a-1].pb(b-1);
+		v[b-1].pb(a-1);
+	}
 	
+	rep(i, 0, n) {
+		dfs(v, n, ans, i, 0, i);
+	}
 	
 	show(ans);
 }

@@ -36,11 +36,27 @@ typedef multiset<int> mseti;
 #define ss second
 
 void solve () {
-	int ans = 0;
+	ll ans = 0;
 	int n;
 	cin >> n;
+	vint v(n);
+	rep(i, 0, n) {
+		cin >> v[i];
+		v[i]--;
+	}
 	
+	ll cnt = 0;
+	rep(i, 0, n) {
+		if (v[i] == i) {
+			cnt++;
+		} else if (v[i] > i && v[v[i]] == i) {
+			ans++;
+		}
+	}
 	
+	//showp(ans, cnt);
+	ans += (cnt * (cnt - 1) / 2);
+
 	show(ans);
 }
 

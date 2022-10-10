@@ -6,7 +6,7 @@ using namespace std;
 //
 typedef long long ll;
 typedef pair<int, int> pii;
-typedef vector<ll> vint;
+typedef vector<int> vint;
 typedef vector<ll> vll;
 typedef vector<string> vstr;
 typedef vector<pii> vpii;
@@ -35,48 +35,59 @@ typedef multiset<int> mseti;
 #define ff first
 #define ss second
 
-ll mod = 998244353;
-
-
-ll binomialCoeff(ll n, ll k) {
-    ll res = 1;
-    if (k > n - k) k = n - k;
+int binomialCoeff(int n, int k)
+{
+    int res = 1;
  
-    for (ll i = 0; i < k; ++i) {
+    // Since C(n, k) = C(n, n-k)
+    if (k > n - k)
+        k = n - k;
+ 
+    // Calculate value of
+    // [n * (n-1) *---* (n-k+1)] / [k * (k-1) *----* 1]
+    for (int i = 0; i < k; ++i) {
         res *= (n - i);
         res /= (i + 1);
-        res %= mod;
     }
+ 
     return res;
 }
 
 void solve () {
-	ll ans = 0;
-	ll n;
+	int ans = 0;
+	int ans2 = 0;
+	int n;
 	cin >> n;
-	vint v(n);
-	rep(i, 0, n) cin >> v[i];
-	ans = n;
+	string s; cin >> s;
+	string t; cin >> t;
 
-	//vint ma(n);
-	rep(M, 2, n+1) {
-		vint res(M, 0);
-		rep(i, 0, n) {
-			res[v[i] % M]++;  
-		}
-		//showv(res, M);
-		
-		rep(cla, 0, M) {
-			if (res[cla] >= M) {
-				ll num = binomialCoeff(res[cla], M);
-				ans += num;
-				ans %= mod;
-				//showp(cla, num);
-			}
-		}
+	vint a(26);
+	for (char c: s) {
+		a[c - 'a']++;
+	}
+	vint b(26);
+	for (char c: t) {
+		b[c - 'a']++;
 	}
 
-	show(ans);
+	//showv(a, 26);
+	//showv(b, 26);
+	int sum = n;
+
+	rep (i, 0, 26) {
+		if (sum == 0) break;
+		ans += sum * a[i];
+		sum -= b[i];
+
+		
+	} sum = n;
+	rep (i, 0, 26) {
+		sum -= b[i];		
+		if (sum == 0) break;
+		ans2 += sum * a[i];
+	}
+
+	show((ans + ans2) / 2 + (ans + ans2) % 2);
 }
 
 int main () 

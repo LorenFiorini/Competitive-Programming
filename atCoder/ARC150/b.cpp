@@ -6,7 +6,7 @@ using namespace std;
 //
 typedef long long ll;
 typedef pair<int, int> pii;
-typedef vector<ll> vint;
+typedef vector<int> vint;
 typedef vector<ll> vll;
 typedef vector<string> vstr;
 typedef vector<pii> vpii;
@@ -35,54 +35,66 @@ typedef multiset<int> mseti;
 #define ff first
 #define ss second
 
-ll mod = 998244353;
-
-
-ll binomialCoeff(ll n, ll k) {
-    ll res = 1;
-    if (k > n - k) k = n - k;
- 
-    for (ll i = 0; i < k; ++i) {
-        res *= (n - i);
-        res /= (i + 1);
-        res %= mod;
-    }
-    return res;
+ll gcd(ll a, ll b) {
+	if (b == 0) return a;
+	return gcd(b, a % b);
 }
 
 void solve () {
-	ll ans = 0;
-	ll n;
-	cin >> n;
-	vint v(n);
-	rep(i, 0, n) cin >> v[i];
-	ans = n;
+	ll a, b, k;
+	cin >> a >> b;
+	ll ans = b - a;
 
-	//vint ma(n);
-	rep(M, 2, n+1) {
-		vint res(M, 0);
-		rep(i, 0, n) {
-			res[v[i] % M]++;  
-		}
-		//showv(res, M);
-		
-		rep(cla, 0, M) {
-			if (res[cla] >= M) {
-				ll num = binomialCoeff(res[cla], M);
-				ans += num;
-				ans %= mod;
-				//showp(cla, num);
+	if (a >= b) {
+		ans = a - b;
+	} else if (b % a == 0) {
+		ans = 0;
+	} else {
+		/*
+		ll dif = b - a;
+		ll rem = 0;
+		ll i = 0;
+		while (i < ans) {
+			rem = (b % (a+i));
+			if (rem == 0) {
+				ans = i;
+				break;
+			} 
+
+			k = b / (a + i) + 1;
+			dif = (a+i) * k - b;
+			
+			if (dif + i <= ans) {
+				ans = dif + i;
+			} 
+			D = min(D, dif);
+
+			//cout << i << ": "; showp(dif, rem);
+
+			i++;
+		}*/
+		ll val;
+		rep (i,0,1000) {
+			val = 2 * i + a - (b % (a+i));
+			if (val < ans) {
+				ans = val;
+				cout << "-> ";
 			}
+			showp(i, val);
 		}
-	}
 
+	}
+	
 	show(ans);
+	show("-");
 }
 
 int main () 
 {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
+	
+	int t; cin >> t; while (t--)
 	
 	solve();
 	

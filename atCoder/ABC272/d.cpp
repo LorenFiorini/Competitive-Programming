@@ -6,7 +6,7 @@ using namespace std;
 //
 typedef long long ll;
 typedef pair<int, int> pii;
-typedef vector<ll> vint;
+typedef vector<int> vint;
 typedef vector<ll> vll;
 typedef vector<string> vstr;
 typedef vector<pii> vpii;
@@ -35,48 +35,69 @@ typedef multiset<int> mseti;
 #define ff first
 #define ss second
 
-ll mod = 998244353;
-
-
-ll binomialCoeff(ll n, ll k) {
-    ll res = 1;
-    if (k > n - k) k = n - k;
- 
-    for (ll i = 0; i < k; ++i) {
-        res *= (n - i);
-        res /= (i + 1);
-        res %= mod;
-    }
-    return res;
-}
 
 void solve () {
-	ll ans = 0;
-	ll n;
-	cin >> n;
-	vint v(n);
-	rep(i, 0, n) cin >> v[i];
-	ans = n;
+	int ans = 0;
+	int n, m, row, col, num;
+	cin >> n >> m;
+	vvi v(n, vint(n, -1));
 
-	//vint ma(n);
-	rep(M, 2, n+1) {
-		vint res(M, 0);
-		rep(i, 0, n) {
-			res[v[i] % M]++;  
-		}
-		//showv(res, M);
-		
-		rep(cla, 0, M) {
-			if (res[cla] >= M) {
-				ll num = binomialCoeff(res[cla], M);
-				ans += num;
-				ans %= mod;
-				//showp(cla, num);
+	vint vec;
+	while (ans * ans <= m) {
+		vec.pb(ans * ans);
+		ans++;
+	}
+	//showv(vec, ans);
+
+	// BFS
+	v[0][0] = 0;
+	queue<pii> q;
+	q.push({0, 0});
+
+	while (!q.empty()) {
+		pii p = q.front();
+		q.pop();
+		num = v[p.first][p.second];
+
+		rep (i, 0, ans) {
+			rep (j, 0, ans) {
+
+				if (vec[i] + vec[j] == m) {
+					// down right
+					row = i + p.first;
+					col = j + p.second;
+					if (row < n && col < n && v[row][col] == -1) {
+						v[row][col] = num + 1;
+						q.push({row, col});
+					}
+					// down left
+					col = p.second - j;
+					if (row < n && col >= 0 && v[row][col] == -1) {
+						v[row][col] = num + 1;
+						q.push({row, col});
+					}
+					// up left
+					row = p.first - i;
+					if (row >= 0 && col >= 0 && v[row][col] == -1) {
+						v[row][col] = num + 1;
+						q.push({row, col});
+					}
+					// up right
+					col = j + p.second;
+					if (row >= 0 && col < n && v[row][col] == -1) {
+						v[row][col] = num + 1;
+						q.push({row, col});
+					}
+					
+				} else if (vec[i] + vec[j] > m) {
+					break;
+				}
 			}
 		}
 	}
 
-	show(ans);
+	
+	showvv(v, n ,n);
 }
 
 int main () 

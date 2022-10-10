@@ -6,7 +6,7 @@ using namespace std;
 //
 typedef long long ll;
 typedef pair<int, int> pii;
-typedef vector<ll> vint;
+typedef vector<int> vint;
 typedef vector<ll> vll;
 typedef vector<string> vstr;
 typedef vector<pii> vpii;
@@ -35,54 +35,86 @@ typedef multiset<int> mseti;
 #define ff first
 #define ss second
 
-ll mod = 998244353;
+bool check(int le, int ri, string s) {
+	while (le <= ri) {
+		if (s[le] == '0') return 0;
+		le++;
+	}
+	return 1;
+}
 
+bool inco(string s, int n, int k) {
+	int ans = 0;
 
-ll binomialCoeff(ll n, ll k) {
-    ll res = 1;
-    if (k > n - k) k = n - k;
- 
-    for (ll i = 0; i < k; ++i) {
-        res *= (n - i);
-        res /= (i + 1);
-        res %= mod;
-    }
-    return res;
+	rep (i, 0, n) {
+		if (s[i] == '?') {
+			int j = i;
+			while (j+1 < n && s[j+1] == '?') {
+				j++;
+			}
+			int d = j - i + 1;
+			if (d > k) {
+				return 0;
+			} else if (d == k) {
+				ans++;
+				if (ans > 1) return 0;
+			}
+			i = j;
+		}
+	}
+	return (ans == 1);
 }
 
 void solve () {
-	ll ans = 0;
-	ll n;
-	cin >> n;
-	vint v(n);
-	rep(i, 0, n) cin >> v[i];
-	ans = n;
+	int ans = 0;
+	int n, k;
+	cin >> n >> k;
+	string s;
+	cin >> s;
+	int i = 0, j = n-1;
 
-	//vint ma(n);
-	rep(M, 2, n+1) {
-		vint res(M, 0);
-		rep(i, 0, n) {
-			res[v[i] % M]++;  
-		}
-		//showv(res, M);
-		
-		rep(cla, 0, M) {
-			if (res[cla] >= M) {
-				ll num = binomialCoeff(res[cla], M);
-				ans += num;
-				ans %= mod;
-				//showp(cla, num);
+	while (i < n && s[i] != '1') i++;
+	while (j >= 0 && s[j] != '1') j--;
+	
+	int d = j - i + 1;
+	if (d == k) {
+		ans = check(i, j, s);
+	} else if (d > k) {
+		ans = 0;
+	} else if (d >= 0 && d < k) {
+		if (check(i, j, s)) {
+			if (i == 0 || j == n-1 || s[i-1] == '0' || s[j+1] == '0') {
+				while (i > 0 && s[i-1] != '0') i--;
+				while (j+1 < n && s[j+1] != '0') j++;
+				d = j - i + 1;
+				if (d >= k) ans = 1;
+			} else {
+				while (i > 0 && s[i-1] != '0') i--;
+				while (j+1 < n && s[j+1] != '0') j++;
+				d = j - i + 1;
+				if (d == k) ans = 1;
 			}
+		} else {
+			ans = 0;
 		}
+	} else if (d < 0) {
+		// only 0 and ?
+		ans = inco(s, n, k);
 	}
 
-	show(ans);
+	if (ans) {
+		show("Yes");
+	} else {
+		show("No");
+	}
 }
 
 int main () 
 {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
+	
+	int t; cin >> t; while (t--)
 	
 	solve();
 	

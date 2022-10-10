@@ -6,7 +6,7 @@ using namespace std;
 //
 typedef long long ll;
 typedef pair<int, int> pii;
-typedef vector<ll> vint;
+typedef vector<int> vint;
 typedef vector<ll> vll;
 typedef vector<string> vstr;
 typedef vector<pii> vpii;
@@ -35,45 +35,48 @@ typedef multiset<int> mseti;
 #define ff first
 #define ss second
 
-ll mod = 998244353;
-
-
-ll binomialCoeff(ll n, ll k) {
-    ll res = 1;
-    if (k > n - k) k = n - k;
- 
-    for (ll i = 0; i < k; ++i) {
-        res *= (n - i);
-        res /= (i + 1);
-        res %= mod;
-    }
-    return res;
-}
 
 void solve () {
-	ll ans = 0;
-	ll n;
+	int ans = 0;
+	int n;
 	cin >> n;
 	vint v(n);
-	rep(i, 0, n) cin >> v[i];
-	ans = n;
+	rep (i, 0, n) cin >> v[i];
+	sort(allg(v));
 
-	//vint ma(n);
-	rep(M, 2, n+1) {
-		vint res(M, 0);
-		rep(i, 0, n) {
-			res[v[i] % M]++;  
-		}
-		//showv(res, M);
-		
-		rep(cla, 0, M) {
-			if (res[cla] >= M) {
-				ll num = binomialCoeff(res[cla], M);
-				ans += num;
-				ans %= mod;
-				//showp(cla, num);
+	if (n == 2) {
+		if ((v[0] + v[1]) % 2 == 0) {
+			ans = v[0] + v[1];
+		} else {
+			ans = -1;
+		} 
+	} else if (n == 3) {
+		rep (i, 0, 3) {
+			rep (j, i + 1, 3) {
+				if ((v[i] + v[j]) % 2 == 0) {
+					ans = max(ans, (v[i] + v[j]));
+				} 
 			}
 		}
+	} else {
+		int even[2] = {-1, -1};
+		int odd[2] = {-1, -1};
+		for (auto num: v) {
+			if (num % 2) {
+				if (odd[0] == -1) odd[0] = num;
+				else if (odd[1] == -1) odd[1] = num;
+			} else {
+				if (even[0] == -1) even[0] = num;
+				else if (even[1] == -1) even[1] = num;
+			}
+			if (odd[1] != -1 && even[1] != -1) {
+				ans = max(even[0] + even[1], odd[0] + odd[1]);
+				break;
+			}
+		}
+
+		if (odd[1] == -1) ans = even[0] + even[1];
+		else if (even[1] == -1) ans = odd[0] + odd[1];
 	}
 
 	show(ans);
