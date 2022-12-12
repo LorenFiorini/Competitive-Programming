@@ -58,46 +58,66 @@ typedef multiset<int> mseti;
 #define ff first
 #define ss second
 
+int n = 41;
+int m = 181;
+int d[4] = {0, 0, 1, -1};
+
+void bfs(vstr &vec) {
+	vvi v(n, vint(m, 1e9));
+	queue<pii> q;
+	//q.push({20, 0});
+	//v[20][0] = 0;
+	//vec[20][0] = 'a';
+	q.push({20, 158});
+	v[20][158] = 0;
+	vec[20][0] = 'z';
+
+	while (!q.empty()) {
+		pii p = q.front();
+		q.pop();
+
+
+		rep (i, 0, 4) {
+			int R = p.ff + d[i];
+			int C = p.ss + d[3-i];
+			if (!(min(R,C) >= 0 && R < n && C < m)) continue;
+
+			if (vec[p.ff][p.ss] - 1 <= vec[R][C] && v[p.ff][p.ss] + 1 < v[R][C]) {
+				v[R][C] = v[p.ff][p.ss] + 1;
+				q.push({R, C});
+				if (vec[R][C] == 'a') {
+					show(v[R][C])
+					return;
+				}
+			}
+		}
+	}
+}
+
 void solve () {
 	int ans = 0;
-	int n = 2000;
-	char d, last = 'R';
-	int num, x = 0, y = 0, X = 0, Y = 0;
-	map<pii, int> mp;
-
-
-	rep (i, 0, n) {
-		cin >> d >> num;
-		//ans += num;
-
-		if (last != d) {
-			mp[{x, y}]--;
-		}
-		last = d;
-		while (num) {
-			if (d == 'L') {
-				x++;
-			} else if (d == 'R') {
-				x--;
-			} else if (d == 'U') {
-				y++;
-			} else {
-				y--;
-			}
-
-			mp[{x, y}]++;
-			num--;
-		}
-		
-	}
 	
-	each(it, mp) {
-		if (it->ss > 0) {
-			//showp(it->ff.ff, it->ff.ss);
-			ans++;
+	vstr vec(n);
+	rep (i, 0, n) cin >> vec[i];
+	//showp(n, m);
+	/*
+	rep (i, 0, n) {
+		rep (j, 0, m) {
+			if (vec[i][j] == 'S') {
+				show("S");
+				showp(i, j);
+			}
+			if (vec[i][j] == 'E') {
+				show("E")
+				showp(i, j);
+			}
 		}
-	}
-	//show(len(mp));
+	}*/
+	//int start[2] = {20, 0};
+	//int end[2] = {20, 158};
+
+	bfs(vec);
+
 	show(ans);
 }
 
@@ -112,7 +132,5 @@ int main ()
 }
 
 // Lorenzo Fiorini
-
-// 6687
-// 6524
-
+// 528
+// 522

@@ -60,21 +60,20 @@ typedef multiset<int> mseti;
 
 void solve () {
 	int ans = 0;
-	int n = 2000;
+	int n = 8;
 	char d, last = 'R';
 	int num, x = 0, y = 0, X = 0, Y = 0;
 	map<pii, int> mp;
+	mp[{x,y}] = 1;
 
 
 	rep (i, 0, n) {
 		cin >> d >> num;
-		//ans += num;
+		
 
-		if (last != d) {
-			mp[{x, y}]--;
-		}
 		last = d;
 		while (num) {
+
 			if (d == 'L') {
 				x++;
 			} else if (d == 'R') {
@@ -85,7 +84,22 @@ void solve () {
 				y--;
 			}
 
-			mp[{x, y}]++;
+			int dist = max(abs(x - X), abs(y - Y));
+			if (dist > 1) {
+				X = x;
+				Y = y;
+				if (d == 'L') {
+					X--;
+				} else if (d == 'R') {
+					X++;
+				} else if (d == 'U') {
+					Y--;
+				} else {
+					Y++;
+				}
+				mp[{X, Y}]++;
+			}
+			
 			num--;
 		}
 		
@@ -93,11 +107,9 @@ void solve () {
 	
 	each(it, mp) {
 		if (it->ss > 0) {
-			//showp(it->ff.ff, it->ff.ss);
 			ans++;
 		}
 	}
-	//show(len(mp));
 	show(ans);
 }
 
@@ -115,4 +127,5 @@ int main ()
 
 // 6687
 // 6524
+// 6503
 
