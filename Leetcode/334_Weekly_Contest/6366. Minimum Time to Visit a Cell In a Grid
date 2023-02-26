@@ -1,0 +1,247 @@
+typedef long long ll;
+class Solution {
+public:
+    int minimumTime(vector<vector<int>>& grid) {
+        int n = grid.size();
+        int m = grid[0].size();
+        int ans = 0;
+        vector<vector<ll>> v(grig.begin(), grid.end());
+        for (int i = 0; i < n; i++) for (int i = 0; i < n; i++) v[i][j] = grid[i][j];
+        
+        map<int, vector<pair<int, int>> mp;
+        
+        while ()
+        
+        return -1;
+    }
+};
+
+typedef long long ll;
+class Solution {
+public:
+    int minimumTime(vector<vector<int>>& grid) {
+        int n = grid.size();
+        int m = grid[0].size();
+        int ans = 0;
+        int d[4] = {0,0,1,-1};
+        map<int, vector<pair<int, int>>> mp;
+        
+        vector<vector<int>> v(grid.begin(), grid.end());
+        vector<vector<int>> vis(n, vector<int> (m, 0));
+        //for (int i = 0; i < n; i++) for (int j = 0; j < m; j++) v[i][j] = grid[i][j];
+        
+        mp[v[0][0]].push_back({0,0});
+        vis[0][0] = 1;
+        
+        while (!mp.empty())
+        {    
+            auto it = mp.begin();
+            for (auto p: it->second)
+            {
+                for (int id = 0; id < 4; id++)
+                {
+                    int row = p.first + d[id];
+                    int col = p.second + d[3-id];
+                    if (min(row, col) < 0 || row == n || col == m)
+                        continue;
+                    if (vis[row][col] == false) {
+                        
+                    } else if (v[row][col] >= v[p.first][p.second] + 1 || ) {
+                        v[row][col] = v[p.first][p.second] + 1;
+                        if (row == n-1 && col == m-1)
+                            return v[row][col];
+                        mp[v[row][col]].push_back({row, col});
+                    }
+                }
+            }
+            mp.erase(it);
+        }
+        
+        return -1;
+    }
+};
+
+
+
+                for (int id = 0; id < 4; id++)
+                {
+                    int row = p.first + d[id];
+                    int col = p.second + d[3-id];
+                    if (min(row, col) < 0 || row == n || col == m)
+                        continue;
+                    if (!vis[row][col]) {
+                        vis[row][col] = 1;
+                        v[row][col] = max(v[p.first][p.second] + 1, v[row][col]);
+                        mp[v[row][col]].push_back({row, col});
+                    }
+                    
+                    if (v[row][col] >= v[p.first][p.second] + 1 || vis[row][col] == false) {
+                        v[row][col] = min(v[p.first][p.second] + 1, grid[];
+                        if (row == n-1 && col == m-1)
+                            return v[row][col];
+                        mp[v[row][col]].push_back({row, col});
+                    }
+                }
+
+
+                 else if (v[row][col] >= v[p.first][p.second] + 1 )
+
+                 if (v[row][col] >= v[p.first][p.second] + 1 || vis[row][col] == false) {
+                        v[row][col] = min(v[p.first][p.second] + 1, grid[];
+                        if (row == n-1 && col == m-1)
+                            return v[row][col];
+                        mp[v[row][col]].push_back({row, col});
+                    }
+
+if (!vis[row][col] && ) {
+                        vis[row][col] = 1;
+                        v[row][col] = max(v[i][j] + 1, grid[row][col]);
+                        if (row == n-1 && col == m-1) {
+                            //show(v);
+                            return v[row][col];
+                        }
+                        mp[v[row][col]].push_back({row, col});
+                        
+                    } else if (v[row][col] >= v[i][j] + 1){
+                        v[row][col] = v[p.first][p.second] + 1;
+                        if (row == n-1 && col == m-1)
+                        if (row == n-1 && col == m-1) {
+                            //show(v);
+                            return v[row][col];
+                        }
+
+                        
+                        mp[v[row][col]].push_back({row, col});
+                    }
+
+    
+
+// not working
+
+typedef long long ll;
+class Solution {
+    void show(vector<vector<int>> &v) {
+        for (auto val: v) {
+            for (auto a: val) cout << a << " ";
+            cout << endl;
+        }
+    }
+public:
+    int minimumTime(vector<vector<int>>& grid) {
+        int n = grid.size();
+        int m = grid[0].size();
+        int ans = 0;
+        int d[4] = {0,0,1,-1};
+        map<int, vector<pair<int, int>>> mp;
+        
+        vector<vector<int>> v(grid.begin(), grid.end());
+        vector<vector<int>> vis(n, vector<int> (m, 0));
+        //for (int i = 0; i < n; i++) for (int j = 0; j < m; j++) v[i][j] = grid[i][j];
+        
+        //if (v[0][0] == 0)
+        mp[v[0][0]].push_back({0,0});
+        vis[0][0] = 1;
+        
+        while (!mp.empty())
+        {    
+            auto it = mp.begin();
+            vector<pair<int,int>> step(it->second.begin(), it->second.end());
+            //mp.erase(it);
+            
+            for (auto p: step)
+            {
+                int i = p.first;
+                int j = p.second;                
+                if (v[i][j] < it->first) continue;
+                
+                for (int id = 0; id < 4; id++)
+                {
+                    int row = p.first + d[id];
+                    int col = p.second + d[3-id];
+                    if (min(row, col) < 0 || row == n || col == m) continue;
+                    
+                    if (!vis[row][col] || v[row][col] <= v[i][j] + 1) {
+                        vis[row][col] = 1;
+                        v[row][col] = v[i][j] + 1;
+                        if (row == n-1 && col == m-1) {
+                            if (m < 10) show(v);
+                            return v[row][col];
+                        }
+                        
+                        mp[v[row][col]].push_back({row, col});
+                    }
+                }
+            }
+            mp.erase(it);
+        }
+        
+        if (m < 10) show(v);
+        return -1;
+    }
+};
+
+// not working
+
+
+
+typedef long long ll;
+class Solution {
+    int d[4] = {0,0,1,-1};
+    void show(vector<vector<int>> &v) {
+        for (auto val: v) {
+            for (auto a: val) cout << a << " ";
+            cout << endl;
+        }
+    }
+    
+public:
+    int minimumTime(vector<vector<int>>& grid) {
+        int n = grid.size();
+        int m = grid[0].size();
+        
+        map<int, vector<pair<int, int>>> mp;
+        vector<vector<int>> v(grid.begin(), grid.end());
+        vector<vector<int>> vis(n, vector<int> (m, 0));
+        if (min(v[0][1], v[1][0]) > 1) return (-1);
+        
+
+        mp[v[0][0]].push_back({0,0});
+        vis[0][0] = 1;
+        
+        while (!mp.empty())
+        {    
+            auto it = mp.begin();
+            int cur = it->first;
+            vector<pair<int,int>> step(it->second.begin(), it->second.end());
+            mp.erase(it);
+            
+            for (auto p: step)
+            {
+                int i = p.first;
+                int j = p.second;                
+                if (v[i][j] < cur) continue;
+                
+                for (int id = 0; id < 4; id++) {
+                    int r = i + d[id];
+                    int c = j + d[3-id];
+                    if (min(r, c) < 0 || r == n || c == m) continue;
+                    
+                    if (!vis[r][c]) {
+                        //  && (v[r][c] <= v[i][j] + 1 || v[r][c] )
+                        vis[r][c] = 1;
+                        v[r][c] = max(v[i][j] + 1, v[r][c] + ((v[r][c]%2) == (v[i][j]%2)));
+                        if (r == n-1 && c == m-1) {
+                            //show(v);
+                            return v[r][c];
+                        }
+                        
+                        mp[v[r][c]].push_back({r, c});
+                    }
+                }
+            }
+            //mp.erase(it);
+        }
+        
+        return (-1);
+    }
+};
