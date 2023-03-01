@@ -21,6 +21,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <assert.h>
+#include <iomanip>
 using namespace std;
 // My Favorite Macros
 typedef long long ll;
@@ -53,7 +54,7 @@ typedef multiset<int> mseti;
 #define showmat(mat) for (auto row: mat) {showv(row);}
 #define showset(it, st) each(it, st) {cout << *it << " ";} cout << "\n";
 #define showmap(it, mp) each(it, mp) {cout << it->ff << " " << it->ss << "\n";} cout << "\n";
- 
+
 
 void solve () {
 	int ans = 0;
