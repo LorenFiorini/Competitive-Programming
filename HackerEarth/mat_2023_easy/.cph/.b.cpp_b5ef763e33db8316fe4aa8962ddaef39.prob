@@ -1,0 +1,1 @@
+{"name":"Local: b","url":"c:\\Users\\loren\\OneDrive\\Escritorio\\CS\\HackerEarth\\mat_2023_easy\\b.cpp","tests":[{"id":1683959305370,"input":"3\n0 1 3\n2 10 3\n8 8 0","output":"YES\nNO\nYES"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\loren\\OneDrive\\Escritorio\\CS\\HackerEarth\\mat_2023_easy\\b.cpp","group":"local","local":true}
