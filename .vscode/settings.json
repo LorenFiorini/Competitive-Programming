@@ -2,6 +2,7 @@
     "C_Cpp.configurationWarnings": "disabled",
 	"editor.inlineSuggest.enabled": true,
 	"github.copilot.editor.enableAutoCompletions": true,
+	"github.copilot.inlineSuggest.enable": true,
     "github.copilot.enable": {
 		"python": true,
 		"cpp": true,
