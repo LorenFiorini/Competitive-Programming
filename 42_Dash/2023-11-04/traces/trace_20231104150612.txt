@@ -1,0 +1,195 @@
+                  
+    .::::  @@             @@@@           @@@@@@@@      @@@@     @@@@
+   ::::::  @@@@@         @@@@@@         @@@@@@@@@@@    @@@@     @@@@
+   ::::::  @@@@@@        @@@@@@        @@@@@    @@     @@@@     @@@@
+   :::        @@@@      @@@  @@@      @@@@             @@@@     @@@@
+  :::         @@@@@    @@@@  @@@@      @@@@@@          @@@@     @@@@
+:::::         @@@@@    @@@    @@@      @@@@@@@@@       @@@@@@@@@@@@@
+:::::         @@@@@   @@@@    @@@@        @@@@@@@@     @@@@@@@@@@@@@
+  :::         @@@@@   @@@@    @@@@           @@@@@@    @@@@     @@@@
+   :::        @@@@    @@@@@@@@@@@@             @@@@@   @@@@     @@@@
+   :::     @@@@@@    @@@@      @@@@    @@      @@@@    @@@@     @@@@
+   ::::::  @@@@     @@@@        @@@@  @@@@@@@@@@@@     @@@@     @@@@
+    :::::  @@       @@@@        @@@@   @@@@@@@@@@      @@@@     @@@@
+
+Running test for group 404_not_found             @ 11/04/2023, 15:06:13
+####################################################################                            
+level 1 -- Start and Finish
+####################################################################
+OK
+Cost:  0.0
+Map:
+MM
+GG
+####################################################################                            
+level 2 - 2x2
+####################################################################
+OK
+Cost:  0.0
+Map:
+E7GG
+A1MM
+####################################################################                            
+level 3 - 4x2
+####################################################################
+OK
+Cost:  5.0
+Map:
+E8W4GGW6
+MMW1E4W4
+####################################################################                            
+level 4 - LTR
+####################################################################
+OK
+Cost:  76.5
+Map:
+MMA1E2W3A4E5W6A7E8W9GG
+####################################################################                            
+level 5 - RTL
+####################################################################
+OK
+Cost:  76.5
+Map:
+GGA9E8W7A6E5W4A3E2W1MM
+####################################################################                            
+level 6 - BTT
+####################################################################
+OK
+Cost:  76.5
+Map:
+GG
+A9
+E8
+W7
+A6
+E5
+W4
+A3
+E2
+W1
+MM
+####################################################################                            
+level 7 - TTB
+####################################################################
+OK
+Cost:  76.5
+Map:
+MM
+W1
+E2
+A3
+W4
+E5
+A6
+W7
+E8
+A9
+GG
+####################################################################                            
+level 8 - 8x4
+####################################################################
+OK
+Cost:  13.0
+Map:
+E1MMW9E1E3GGA2E2
+A7W3W7W3E1A3E9A4
+W7E6E8E7W9A4A6A6
+E3A2W2W1E6A3E7E9
+####################################################################                            
+level 9 - 8x8
+####################################################################
+OK
+Cost:  18.0
+Map:
+A4A2W9A4GGW4E9E4
+MMW3A5E5W4A5E4E8
+W4E3W5W8W3A3A6W8
+W1E5A5A6W3E1E7W4
+E8W5W6W9W2A6W4A4
+A7E8A9E8E9W9E6A8
+A8A6W6A2E1A6A6A2
+W7A2W4W5E6A1W1A9
+####################################################################                            
+level 10
+####################################################################
+OK
+Cost:  29.0
+Map:
+A2E7E5E5W2E9A1A3W9W4E9W5A9A3E8E9
+E3A9E1W7MMW9E7W6W5E8A7E6E4A3W4E4
+A3E6W6E1W9A7A3W9W2A1W7A3E8E1E2A4
+W1E4W6W7W6A3A6W9A9W2A1A9W3E6E3W9
+W7E8A3W2A6E5W7W4W6A5W3A9W8A3E9W1
+W3W5E7A9E7W5W4E6E3W8E6A8W6W2W3E8
+A4A7W8GGW5E8E4W1W8E4A7W1A6E3W4E5
+A4W7A2W6E1A7E1W7A5E7A2A4E8E3A2A2
+####################################################################                            
+level 11
+####################################################################
+OK
+Cost:  24.0
+Map:
+A2A1E7W3A1W9E1W6W8A1A6A8E3A2E1E4
+W2W1E5A2E4E3E3W9A5A4A9E6A6W8A6A5
+W6A5A7E2W4E8W2W1W7W9A6A8A5W2W2W8
+E2A5E8E5A8A7W3E7A7A9E3E4W2A1E3W7
+E4W6A1W7W9W5W3A5W7W3E3W5E5A3A7W8
+W5W8A5A2E9W1E3W8E3A5E8A7W2W8E5E4
+W3A8E7A6A2A6A7W4W2E5E1A6E6W4W7W4
+W3A1E6A5E6A6A1W9A2A9A3E5A6A6A5E8
+W1E8A7E8A4E4A7E3W2A1W2E7E7E4E5W4
+E6W2E8W5A7W2E7A1A3E6W8A5W3A5A9A4
+W5A7W8W2A4A2E1W6W8W1E8W1E6W8W8E7
+E2E1A9W7E3W1A6E2A3A6A4A7MMA7W8A9
+E6W3A2W7A6W6A4E9E9W8A9W8A3A9E8A2
+W8E8A5E9W5A8W8W9E5GGE4W8E2E5A7A6
+W3E5W4A6W5W1A9E8A2E9E3W8A1W6E7W8
+E7W9W6A1A2E4E2W2A8W9W9W7A2W3W7E4
+####################################################################                            
+level 12
+####################################################################
+OK
+Cost:  33.0
+Map:
+A3A7E7W1E3W1E2E3W6A1E4A6A9A1E1A7E6E9W1E4A5A4A9A7A1A3W3W3A6W2A6A9
+A7E1W8A9A2A2W1W2A3A5E2E7W3A9W3W1W2E3E5E2W6E6E2W8W6E8A7W4E3W7W3A9
+A6E7E8E8E4A1A2E2A9A2E4A3W3E7A7E3W2A2A6W3W9W9A2E6E5A9W4W2W7E1A8E8
+E3A3E7E1A2A7W4A3A9A9W7E7E9A3A9A5E4A2A6E5W6E3A1A9A3W1A9E9A4A3W4A7
+W7W7A4A3W5W4W7W3E1A8W8E4W6W4E1E9A4E7W9W7W1A9E4E2E6A3W3E8E5A7E7E4
+E1E7W7E8W2A1W5A8W6A8W5W5W6A2A4W2A8E6A3E8W6E7E7E4E9A3E3W5E9E3W5E8
+W3A4W9A7A8W2W4A9A6A2E8A2W9W4W6E9E8A5E3A7E5E9E6W5A3A5W4E8A2W3A3A8
+A6E5W5W2E2E6E2A2W4E9E8A5A1W9W4A3A8E7A5W7W6E6E7E1W1A8A5W1E5A9W4E7
+W3W5A5A3W1W4A2A1E2A5A3E3W7W9W9E2A7E9E9A8E8W3W6E6A3W2W7W1W8E3A6A9
+W5A1W3E4E1E9A2E9E5W1E6W4A5A9A3E9A2W7A3W6A5W3W7A3A8A1E3E9W2E3W7E4
+W8A1A1A7W4E6E2A6A5A9W7W3A1A9E4W5W2W1A1A5A3E9E2E2W4W5W6E9A6W8E5E3
+W6E9W1E2A1W7E9W9E1W7A9E6W3A4W2E9E3E6A6A7A9W3E4A9A6A2E7W9W9W8E7W2
+E4E6A3A9E2W4W9E1E1A5W8E8W8A1W5W8A9W7A4A7GGW7E5W3W3E4A9W4E4W5E3E5
+A6A6W6E8W6A5W2W6W5E5A1W1MME1E4A7A7E2E1A5A7E8W2A2A2E6E7A5A2A4A2A8
+E7W2W2E7A8A1A9W5W5E5W7A5E8E9W2W9A8A9E6A4W1A2E5A2A6W6E4A5A9E7E6E9
+W4A3E5W1W5E3E5W9A8W4E2W5A8E6W4E2E8E8W1A4W7W6A5E6W6A4E7W9W8A7E3E4
+####################################################################                            
+level 13 - Mountain
+####################################################################
+OK
+Cost:  54.0
+Map:
+MMW1W1W1W1W1W1W1W1W1W1W1W1W1W1W1W1W1W1W1
+A1A2W2W2W2W2W2W2W2W2W2W2W2W2W2W2W2W2W2E1
+A1A2A3W3W3W3W3W3W3W3W3W3W3W3W3W3W3W3E2E1
+A1A2A3A4W4W4W4W4W4W4W4W4W4W4W4W4W4E3E2E1
+A1A2A3A4A5W5W5W5W5W5W5W5W5W5W5W5E4E3E2E1
+A1A2A3A4A5A6W6W6W6W6W6W6W6W6W6E5E4E3E2E1
+A1A2A3A4A5A6A7W7W7W7W7W7W7W7E6E5E4E3E2E1
+A1A2A3A4A5A6A7A8W8W8W8W8W8E7E6E5E4E3E2E1
+A1A2A3A4A5A6A7A8A9W9W9W9E8E7E6E5E4E3E2E1
+A1A2A3A4A5A6A7A8A9A9GGE9E8E7E6E5E4E3E2E1
+A1A2A3A4A5A6A7A8A9A9E9E9E8E7E6E5E4E3E2E1
+A1A2A3A4A5A6A7A8E9E9E9E9E8E7E6E5E4E3E2E1
+A1A2A3A4A5A6A7E8E8E8E8E8E8E7E6E5E4E3E2E1
+A1A2A3A4A5A6E7E7E7E7E7E7E7E7E6E5E4E3E2E1
+A1A2A3A4A5E6E6E6E6E6E6E6E6E6E6E5E4E3E2E1
+A1A2A3A4E5E5E5E5E5E5E5E5E5E5E5E5E4E3E2E1
+A1A2A3A4E4E4E4E4E4E4E4E4E4E4E4E4E4E3E2E1
+A1A2A3E3E3E3E3E3E3E3E3E3E3E3E3E3E3E3E2E1
+A1A2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E1
+A1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1
