@@ -11,8 +11,6 @@
 #include <stack>
 #include <map>
 #include <set>
-#include <unordered_map>
-#include <unordered_set>
 #include <functional>
 #include <numeric>
 #include <utility>
@@ -24,29 +22,10 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <iomanip>
+
 using namespace std;
-// My Favorite Macros
-typedef long long ll;
-typedef pair<int, int> pii;
-typedef vector<int> vint;
-typedef vector<ll> vll;
-typedef vector<string> vstr;
-typedef vector<pii> vpii;
-typedef vector<vint> vvi;
-typedef map<int,int> mpii;
-typedef set<int> seti;
-typedef multiset<int> mseti;
-#define mk make_pair
-#define pb push_back
-#define ff first
-#define ss second
-#define por(i_, a_, b_, in_) for (int i_ = a_; i_ < (b_); i_ += in_)
-#define rep(i_, a_, b_) por(i_, a_, b_, 1)
-#define each(it_, mp_) for (auto it_ = mp_.begin(); it_ != mp_.end(); it_++)
-#define all(c_) c_.begin(), c_.end()
-#define allg(c_) all(c_), greater<> ()
-#define len(v_) v_.size()
-#define precision(d_) cout << setprecision(d_) << fixed;
+typedef int64_t ll;
+
 // Debugging Tools
 #define show(x_) cout << x_ << "\n";
 #define showbin(x_, n_) for (int i_ = (1 << n_); i_ > 0; i_ >>= 1) {cout << ((x_&i_)? 1: 0);} cout << "\n";
