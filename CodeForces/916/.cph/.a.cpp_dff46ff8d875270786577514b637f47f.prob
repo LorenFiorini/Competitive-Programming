@@ -1,0 +1,1 @@
+{"name":"Local: a","url":"/home/lorenzo/Desktop/Competitive-Programming/CodeForces/916/a.cpp","tests":[{"id":1702996599773,"input":"3\n6\nACBCBC\n7\nAAAAFPC\n22\nFEADBBDFFEDFFFDHHHADCC","output":"3\n1\n4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/lorenzo/Desktop/Competitive-Programming/CodeForces/916/a.cpp","group":"local","local":true}
