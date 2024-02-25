@@ -1,0 +1,666 @@
+./bubble_cup/a.exe
+./codeChef/August Cook-Off 2021/c.exe
+./codeChef/August Cook-Off 2021/b.exe
+./codeChef/August Cook-Off 2021/a.exe
+./codeChef/August Cook-Off 2021/d.exe
+./codeChef/August Cook-Off 2021/e.exe
+./codeChef/starters_69/c2.exe
+./codeChef/starters_69/c.exe
+./codeChef/starters_69/b.exe
+./codeChef/starters_69/a.exe
+./codeChef/starters_69/d.exe
+./codeChef/starters_79/c.exe
+./codeChef/starters_79/b.exe
+./codeChef/starters_79/a.exe
+./codeChef/starters_79/d.exe
+./codeChef/starters_79/e.exe
+./codeChef/July_CookOff_2022/c.exe
+./codeChef/July_CookOff_2022/b.exe
+./codeChef/July_CookOff_2022/a.exe
+./codeChef/July_CookOff_2022/d.exe
+./codeChef/starters_78/c.exe
+./codeChef/starters_78/b.exe
+./codeChef/starters_78/a.exe
+./codeChef/starters_78/c1.exe
+./codeChef/starters_78/b1.exe
+./codeChef/Starters 9/c.exe
+./codeChef/Starters 9/b.exe
+./codeChef/Starters 9/a.exe
+./codeChef/Starters 9/f.exe
+./codeChef/Starters 9/e.exe
+./codeChef/starters_77/c2.exe
+./codeChef/starters_77/c.exe
+./codeChef/starters_77/b.exe
+./codeChef/starters_77/a.exe
+./codeChef/starters_77/a1.exe
+./codeChef/starters_77/c1.exe
+./codeChef/starters_77/e.exe
+./Code Jam/Round 1C 2022/c.exe
+./Code Jam/Round 1C 2022/b.exe
+./Code Jam/Round 1C 2022/a.exe
+./Code Jam/Round 1C 2022/a2.exe
+./Code Jam/Round 1C 2022/b1.exe
+./Code Jam/Round 1A 2022/c.exe
+./Code Jam/Round 1A 2022/b.exe
+./Code Jam/Round 1A 2022/a.exe
+./Code Jam/Round 1B 2022/b4.exe
+./Code Jam/Round 1B 2022/c.exe
+./Code Jam/Round 1B 2022/b.exe
+./Code Jam/Round 1B 2022/a.exe
+./Google Code Jam/Round 1C 2022/c.exe
+./Google Code Jam/Round 1C 2022/b.exe
+./Google Code Jam/Round 1C 2022/a.exe
+./Google Code Jam/Round 1C 2022/a2.exe
+./Google Code Jam/Round 1C 2022/b1.exe
+./Google Code Jam/Round 1A 2022/c.exe
+./Google Code Jam/Round 1A 2022/b.exe
+./Google Code Jam/Round 1A 2022/a.exe
+./Google Code Jam/Round 1B 2022/b4.exe
+./Google Code Jam/Round 1B 2022/c.exe
+./Google Code Jam/Round 1B 2022/b.exe
+./Google Code Jam/Round 1B 2022/a.exe
+./HackerEarth/DSA_February_23/c.exe
+./HackerEarth/DSA_February_23/b.exe
+./HackerEarth/DSA_February_23/a.exe
+./HackerEarth/DSA_February_23/c1.exe
+./HackerEarth/April 2022/c.exe
+./HackerEarth/April 2022/b.exe
+./HackerEarth/April 2022/a.exe
+./CERC ICPC 2021/Practice/c2.exe
+./CERC ICPC 2021/Practice/c.exe
+./CERC ICPC 2021/Practice/a.exe
+./CERC ICPC 2021/Practice/c1.exe
+./codeForces/735/c.exe
+./codeForces/735/b.exe
+./codeForces/735/a.exe
+./codeForces/869/c2.exe
+./codeForces/869/c.exe
+./codeForces/869/b.exe
+./codeForces/869/a.exe
+./codeForces/869/a1.exe
+./codeForces/869/c1.exe
+./codeForces/722/c.exe
+./codeForces/722/b.exe
+./codeForces/722/a.exe
+./codeForces/738/c.exe
+./codeForces/738/b.exe
+./codeForces/738/a.exe
+./codeForces/738/d.exe
+./codeForces/121/c.exe
+./codeForces/121/b.exe
+./codeForces/121/a.exe
+./codeForces/129/c.exe
+./codeForces/129/b.exe
+./codeForces/129/a.exe
+./codeForces/129/f.exe
+./codeForces/129/d.exe
+./codeForces/686/a.exe
+./codeForces/721/c.exe
+./codeForces/721/a.exe
+./codeForces/743/c.exe
+./codeForces/743/b.exe
+./codeForces/743/a.exe
+./codeForces/726/c.exe
+./codeForces/726/b.exe
+./codeForces/726/a.exe
+./codeForces/726/d.exe
+./codeForces/730/c.exe
+./codeForces/730/b.exe
+./codeForces/730/a.exe
+./codeForces/143/c.exe
+./codeForces/143/b.exe
+./codeForces/143/a.exe
+./codeForces/143/d.exe
+./codeForces/143/d1.exe
+./codeForces/131/c.exe
+./codeForces/131/b.exe
+./codeForces/131/a.exe
+./codeForces/131/d.exe
+./codeForces/131/d2.exe
+./codeForces/114/c.exe
+./codeForces/114/b.exe
+./codeForces/114/a.exe
+./codeForces/114/d.exe
+./codeForces/742/b.exe
+./codeForces/742/a.exe
+./codeForces/742/d.exe
+./codeForces/122/c.exe
+./codeForces/122/b.exe
+./codeForces/122/a.exe
+./codeForces/122/d.exe
+./codeForces/737/b.exe
+./codeForces/737/a.exe
+./codeForces/725/c.exe
+./codeForces/725/b.exe
+./codeForces/725/a.exe
+./codeForces/725/d.exe
+./codeForces/126/c2.exe
+./codeForces/126/c.exe
+./codeForces/126/b.exe
+./codeForces/126/a.exe
+./codeForces/126/c1.exe
+./codeForces/728/c.exe
+./codeForces/728/b.exe
+./codeForces/728/a.exe
+./codeForces/727/c.exe
+./codeForces/727/b.exe
+./codeForces/727/a.exe
+./codeForces/727/d.exe
+./codeForces/2020-2021 ACM-ICPC Brazil/g.exe
+./codeForces/2020-2021 ACM-ICPC Brazil/b.exe
+./codeForces/120/b.exe
+./codeForces/120/a.exe
+./codeForces/120/d.exe
+./codeForces/120/e.exe
+./codeForces/741/b.exe
+./codeForces/741/a.exe
+./codeForces/741/d1.exe
+./codeForces/731/c.exe
+./codeForces/731/b.exe
+./codeForces/731/a.exe
+./codeForces/731/f.exe
+./codeForces/731/e.exe
+./codeForces/133/b.exe
+./codeForces/133/a.exe
+./codeForces/133/c1.exe
+./codeForces/133/d.exe
+./codeForces/133/d1.exe
+./codeForces/133/d2.exe
+./codeForces/734/c.exe
+./codeForces/734/a.exe
+./codeForces/732/c.exe
+./codeForces/732/b.exe
+./codeForces/732/a.exe
+./codeForces/732/e.exe
+./codeForces/729/c.exe
+./codeForces/729/b.exe
+./codeForces/729/a.exe
+./codeForces/740/c.exe
+./codeForces/740/b.exe
+./codeForces/740/a.exe
+./codeForces/724/c.exe
+./codeForces/724/b.exe
+./codeForces/724/a.exe
+./codeForces/147/c.exe
+./codeForces/147/b.exe
+./codeForces/147/a.exe
+./codeForces/147/d.exe
+./codeForces/147/b1.exe
+./codeForces/739/c.exe
+./codeForces/739/b.exe
+./codeForces/739/a.exe
+./codeForces/739/f.exe
+./codeForces/739/d.exe
+./codeForces/111/c.exe
+./codeForces/111/b.exe
+./codeForces/111/a.exe
+./codeForces/127/c.exe
+./codeForces/127/b.exe
+./codeForces/127/a.exe
+./codeForces/127/b2.exe
+./codeForces/127/d.exe
+./codeForces/127/d1.exe
+./codeForces/127/d2.exe
+./codeForces/127/b1.exe
+./codeForces/132/c.exe
+./codeForces/132/b.exe
+./codeForces/132/a.exe
+./codeForces/132/c1.exe
+./codeForces/132/d.exe
+./codeForces/112/c.exe
+./codeForces/112/b.exe
+./codeForces/112/a.exe
+./codeForces/116/c.exe
+./codeForces/116/b.exe
+./codeForces/116/a.exe
+./codeForces/116/d.exe
+./codeForces/733/c.exe
+./codeForces/733/b.exe
+./codeForces/733/a.exe
+./codeForces/733/d.exe
+./CodeForces/865/c.exe
+./CodeForces/865/b.exe
+./CodeForces/865/a.exe
+./CodeForces/865/a1.exe
+./CodeForces/865/c1.exe
+./CodeForces/865/b2.exe
+./CodeForces/865/b1.exe
+./CodeForces/865/e1.exe
+./CodeForces/865/e.exe
+./CodeForces/871/g.exe
+./CodeForces/871/g2.exe
+./CodeForces/871/c.exe
+./CodeForces/871/b.exe
+./CodeForces/871/a.exe
+./CodeForces/871/f.exe
+./CodeForces/871/g1.exe
+./CodeForces/871/d.exe
+./CodeForces/871/h.exe
+./CodeForces/871/e1.exe
+./CodeForces/871/e.exe
+./tlx_toki/32/c.exe
+./tlx_toki/32/b.exe
+./tlx_toki/32/a.exe
+./tlx_toki/32/d.exe
+./tlx_toki/32/d2.exe
+./tlx_toki/32/d3.exe
+./kickStart (Google)/2022/Round G/c2.exe
+./kickStart (Google)/2022/Round G/c.exe
+./kickStart (Google)/2022/Round G/c3.exe
+./kickStart (Google)/2022/Round G/b.exe
+./kickStart (Google)/2022/Round G/a.exe
+./kickStart (Google)/2022/Round G/c1.exe
+./kickStart (Google)/2022/Round G/d.exe
+./kickStart (Google)/2022/Round G/b1.exe
+./kickStart (Google)/2022/Round C/c.exe
+./kickStart (Google)/2022/Round C/b.exe
+./kickStart (Google)/2022/Round C/a.exe
+./kickStart (Google)/2022/Round C/d.exe
+./kickStart (Google)/2022/Round C/d1.exe
+./kickStart (Google)/2022/Round C/d2.exe
+./kickStart (Google)/2022/Round H/c2.exe
+./kickStart (Google)/2022/Round H/c.exe
+./kickStart (Google)/2022/Round H/b.exe
+./kickStart (Google)/2022/Round H/a.exe
+./kickStart (Google)/2022/Round H/c1.exe
+./kickStart (Google)/2022/Round H/d.exe
+./kickStart (Google)/2022/Round H/d1.exe
+./kickStart (Google)/2022/Round H/d2.exe
+./kickStart (Google)/2022/Round H/d3.exe
+./kickStart (Google)/2022/Round H/b1.exe
+./kickStart (Google)/Practice-2 2022/c.exe
+./kickStart (Google)/Practice-2 2022/b.exe
+./kickStart (Google)/Practice-2 2022/a.exe
+./kickStart (Google)/Practice-2 2022/d.exe
+./kickStart (Google)/2021/Round F 2021/c.exe
+./kickStart (Google)/2021/Round F 2021/b.exe
+./kickStart (Google)/2021/Round F 2021/a.exe
+./kickStart (Google)/2021/Round C 2021/c.exe
+./kickStart (Google)/2021/Round C 2021/b.exe
+./kickStart (Google)/2021/Round C 2021/a.exe
+./kickStart (Google)/2021/Round C 2021/a2.exe
+./kickStart (Google)/2021/Round D 2021/c.exe
+./kickStart (Google)/2021/Round D 2021/b.exe
+./kickStart (Google)/2021/Round D 2021/a.exe
+./kickStart (Google)/2021/Round D 2021/d.exe
+./kickStart (Google)/2021/Round G 2021/c.exe
+./kickStart (Google)/2021/Round G 2021/b.exe
+./kickStart (Google)/2021/Round G 2021/a.exe
+./kickStart (Google)/2021/Round G 2021/d.exe
+./kickStart (Google)/2021/Round H 2021/c.exe
+./kickStart (Google)/2021/Round H 2021/b.exe
+./kickStart (Google)/2021/Round H 2021/a.exe
+./kickStart (Google)/2021/Round H 2021/d.exe
+./kickStart (Google)/Practice-1 2022/c.exe
+./kickStart (Google)/Practice-1 2022/b.exe
+./kickStart (Google)/Practice-1 2022/a.exe
+./kickStart (Google)/Practice-1 2022/d.exe
+./dmoj_ca/DMOPC _2023_April/c.exe
+./dmoj_ca/DMOPC _2023_April/b.exe
+./dmoj_ca/DMOPC _2023_April/a.exe
+./dmoj_ca/DMOPC _2023_April/d.exe
+./dmoj_ca/DMOPC _2023_April/d1.exe
+./dmoj_ca/DMOPC _2023_April/e.exe
+./dmoj_ca/ma_contest_series_2/c.exe
+./dmoj_ca/ma_contest_series_2/b.exe
+./dmoj_ca/ma_contest_series_2/a.exe
+./dmoj_ca/ma_contest_series_2/d.exe
+./dmoj_ca/ma_contest_series_2/d1.exe
+./dmoj_ca/ma_contest_series_2/e.exe
+./BeeCrowd/SAP_hungary_2022/g.exe
+./BeeCrowd/SAP_hungary_2022/c.exe
+./BeeCrowd/SAP_hungary_2022/b.exe
+./BeeCrowd/SAP_hungary_2022/a.exe
+./BeeCrowd/SAP_hungary_2022/i1.exe
+./BeeCrowd/SAP_hungary_2022/g1.exe
+./BeeCrowd/SAP_hungary_2022/d.exe
+./BeeCrowd/SAP_hungary_2022/j.exe
+./BeeCrowd/SAP_hungary_2022/h.exe
+./BeeCrowd/SAP_hungary_2022/i.exe
+./BeeCrowd/SAP_hungary_2022/e.exe
+./HackerRank/1st february/b.exe
+./eolymp/BSU_individual/j1.exe
+./eolymp/BSU_individual/g.exe
+./eolymp/BSU_individual/c.exe
+./eolymp/BSU_individual/b.exe
+./eolymp/BSU_individual/i3.exe
+./eolymp/BSU_individual/i1.exe
+./eolymp/BSU_individual/f.exe
+./eolymp/BSU_individual/d.exe
+./eolymp/BSU_individual/j.exe
+./eolymp/BSU_individual/h.exe
+./eolymp/BSU_individual/i.exe
+./eolymp/BSU_individual/e.exe
+./eolymp/BSU_individual/i2.exe
+./PrepBytes/april_23/d.exe
+./PrepBytes/april_23/d1.exe
+./PrepBytes/april_23/e1.exe
+./atCoder/236ABC/c.exe
+./atCoder/236ABC/b.exe
+./atCoder/236ABC/a.exe
+./atCoder/236ABC/d.exe
+./atCoder/236ABC/e.exe
+./atCoder/239ABC/c.exe
+./atCoder/239ABC/b.exe
+./atCoder/239ABC/a.exe
+./atCoder/239ABC/e3.exe
+./atCoder/239ABC/d.exe
+./atCoder/239ABC/e.exe
+./atCoder/ABC272/c.exe
+./atCoder/ABC272/b.exe
+./atCoder/ABC272/a.exe
+./atCoder/ABC272/c1.exe
+./atCoder/ABC272/f.exe
+./atCoder/ABC272/d.exe
+./atCoder/ABC272/d1.exe
+./atCoder/ABC272/f1.exe
+./atCoder/230ABC/c.exe
+./atCoder/230ABC/b.exe
+./atCoder/230ABC/a.exe
+./atCoder/230ABC/d.exe
+./atCoder/ARC150/b.exe
+./atCoder/ARC150/a.exe
+./atCoder/ARC150/a1.exe
+./atCoder/ARC150/b1.exe
+./atCoder/214ABC/c.exe
+./atCoder/214ABC/b.exe
+./atCoder/214ABC/a.exe
+./atCoder/AGC59/a.exe
+./atCoder/285ABC/c.exe
+./atCoder/285ABC/b.exe
+./atCoder/285ABC/a.exe
+./atCoder/285ABC/f.exe
+./atCoder/285ABC/d.exe
+./atCoder/285ABC/e.exe
+./atCoder/210/c.exe
+./atCoder/210/b.exe
+./atCoder/210/a.exe
+./atCoder/210/d.exe
+./atCoder/201/c.exe
+./atCoder/201/b.exe
+./atCoder/201/a.exe
+./atCoder/201/d.exe
+./atCoder/ABC253/c.exe
+./atCoder/ABC253/b.exe
+./atCoder/ABC253/a.exe
+./atCoder/ABC253/f.exe
+./atCoder/ABC253/d.exe
+./atCoder/ABC253/e.exe
+./atCoder/ABC258/c.exe
+./atCoder/ABC258/b.exe
+./atCoder/ABC258/a.exe
+./atCoder/ABC258/f.exe
+./atCoder/204/c.exe
+./atCoder/204/b.exe
+./atCoder/204/x.exe
+./atCoder/204/a.exe
+./atCoder/204/d.exe
+./atCoder/233ABC/c.exe
+./atCoder/233ABC/b.exe
+./atCoder/233ABC/a.exe
+./atCoder/233ABC/f.exe
+./atCoder/233ABC/d.exe
+./atCoder/233ABC/e.exe
+./atCoder/ARC143/c.exe
+./atCoder/ARC143/b.exe
+./atCoder/ARC143/a.exe
+./atCoder/237ABC/c.exe
+./atCoder/237ABC/b.exe
+./atCoder/237ABC/a.exe
+./atCoder/237ABC/f.exe
+./atCoder/237ABC/e.exe
+./atCoder/227ABC/c.exe
+./atCoder/227ABC/b.exe
+./atCoder/227ABC/a.exe
+./atCoder/227ABC/d.exe
+./atCoder/122/a.exe
+./atCoder/217ABC/c.exe
+./atCoder/217ABC/b.exe
+./atCoder/217ABC/a.exe
+./atCoder/217ABC/d.exe
+./atCoder/ARC152/c.exe
+./atCoder/ARC152/b.exe
+./atCoder/ARC152/a.exe
+./atCoder/ARC152/c1.exe
+./atCoder/ARC152/b1.exe
+./atCoder/213ABC/c.exe
+./atCoder/213ABC/b.exe
+./atCoder/213ABC/a.exe
+./atCoder/213ABC/d.exe
+./atCoder/213ABC/e.exe
+./atCoder/ARC155/b.exe
+./atCoder/ARC155/a.exe
+./atCoder/ARC155/a1.exe
+./atCoder/ARC155/a2.exe
+./atCoder/ARC155/a3.exe
+./atCoder/ARC140/c.exe
+./atCoder/ARC140/b.exe
+./atCoder/ARC140/a.exe
+./atCoder/ARC140/c1.exe
+./atCoder/218/c.exe
+./atCoder/218/b.exe
+./atCoder/218/a.exe
+./atCoder/218/d.exe
+./atCoder/208ABC/c.exe
+./atCoder/208ABC/b.exe
+./atCoder/208ABC/a.exe
+./atCoder/242ABC/c.exe
+./atCoder/242ABC/b.exe
+./atCoder/242ABC/a.exe
+./atCoder/242ABC/d.exe
+./atCoder/121ARC/a.exe
+./atCoder/ABC291/e2.exe
+./atCoder/ABC291/c.exe
+./atCoder/ABC291/b.exe
+./atCoder/ABC291/a.exe
+./atCoder/ABC291/e6.exe
+./atCoder/ABC291/e5.exe
+./atCoder/ABC291/e3.exe
+./atCoder/ABC291/d.exe
+./atCoder/ABC291/d1.exe
+./atCoder/ABC291/e1.exe
+./atCoder/ABC291/e.exe
+./atCoder/202ABC/c.exe
+./atCoder/202ABC/b.exe
+./atCoder/202ABC/a.exe
+./atCoder/202ABC/d.exe
+./atCoder/ABC277/c.exe
+./atCoder/ABC277/b.exe
+./atCoder/ABC277/a.exe
+./atCoder/ABC277/d.exe
+./atCoder/ABC277/e.exe
+./atCoder/211ABC/c.exe
+./atCoder/211ABC/b.exe
+./atCoder/211ABC/d.exe
+./atCoder/ABC289/c.exe
+./atCoder/ABC289/b.exe
+./atCoder/ABC289/a.exe
+./atCoder/ABC289/d.exe
+./atCoder/ABC289/e1.exe
+./atCoder/ABC289/e.exe
+./atCoder/ABC262/c.exe
+./atCoder/ABC262/b.exe
+./atCoder/ABC262/a.exe
+./atCoder/ABC262/d.exe
+./atCoder/ABC262/d1.exe
+./atCoder/225ABC/c.exe
+./atCoder/225ABC/b.exe
+./atCoder/225ABC/a.exe
+./atCoder/225ABC/f.exe
+./atCoder/225ABC/d.exe
+./atCoder/225ABC/e.exe
+./atCoder/226ABC/c.exe
+./atCoder/226ABC/b.exe
+./atCoder/226ABC/a.exe
+./atCoder/226ABC/e.exe
+./atCoder/212ABC/c.exe
+./atCoder/212ABC/b.exe
+./atCoder/212ABC/a.exe
+./atCoder/212ABC/d.exe
+./atCoder/223ABC/c.exe
+./atCoder/223ABC/b.exe
+./atCoder/223ABC/a.exe
+./atCoder/223ABC/d.exe
+./atCoder/ABC259/c.exe
+./atCoder/ABC259/b.exe
+./atCoder/ABC259/a.exe
+./atCoder/ABC259/d.exe
+./atCoder/222ABC/c.exe
+./atCoder/222ABC/b.exe
+./atCoder/222ABC/a.exe
+./atCoder/222ABC/d.exe
+./atCoder/ABC278/c.exe
+./atCoder/ABC278/b.exe
+./atCoder/ABC278/a.exe
+./atCoder/ABC278/f.exe
+./atCoder/ABC278/d.exe
+./atCoder/ABC278/f1.exe
+./atCoder/ABC278/e.exe
+./atCoder/ABC205/b.exe
+./atCoder/219ABC/c.exe
+./atCoder/219ABC/b.exe
+./atCoder/219ABC/a.exe
+./atCoder/219ABC/d.exe
+./atCoder/219ABC/e.exe
+./atCoder/200/c.exe
+./atCoder/200/a.exe
+./atCoder/209ABC/c.exe
+./atCoder/209ABC/b.exe
+./atCoder/209ABC/a.exe
+./atCoder/209ABC/d.exe
+./atCoder/206ABC/c.exe
+./atCoder/206ABC/a.exe
+./atCoder/206ABC/d.exe
+./atCoder/206ABC/e.exe
+./atCoder/ABC249/c2.exe
+./atCoder/ABC249/c.exe
+./atCoder/ABC249/b.exe
+./atCoder/ABC249/a.exe
+./atCoder/ABC249/c1.exe
+./atCoder/ABC249/d.exe
+./atCoder/ABC249/e.exe
+./atCoder/290ABC/c.exe
+./atCoder/290ABC/b.exe
+./atCoder/290ABC/a.exe
+./atCoder/290ABC/c1.exe
+./atCoder/290ABC/d.exe
+./atCoder/290ABC/e.exe
+./atCoder/203ABC/b.exe
+./atCoder/203ABC/a.exe
+./atCoder/203ABC/d.exe
+./atCoder/240ABC/c.exe
+./atCoder/240ABC/b.exe
+./atCoder/240ABC/a.exe
+./atCoder/240ABC/f.exe
+./atCoder/240ABC/d.exe
+./atCoder/240ABC/e.exe
+./atCoder/220ABC/a.exe
+./atCoder/220ABC/f.exe
+./atCoder/220ABC/d.exe
+./atCoder/ARC138/b.exe
+./atCoder/ARC138/a.exe
+./atCoder/ARC138/d.exe
+./atCoder/ABC254/c.exe
+./atCoder/ABC254/b.exe
+./atCoder/ABC254/a.exe
+./atCoder/ABC254/d.exe
+./atCoder/207/c.exe
+./atCoder/207/b.exe
+./atCoder/207/a.exe
+./atCoder/ABC276/b.exe
+./atCoder/ABC276/d.exe
+./atCoder/ABC248/c.exe
+./atCoder/ABC248/b.exe
+./atCoder/ABC248/a.exe
+./atCoder/ABC248/f.exe
+./atCoder/ABC248/d.exe
+./atCoder/ABC248/e.exe
+./atCoder/221ABC/c.exe
+./atCoder/221ABC/b.exe
+./atCoder/221ABC/a.exe
+./atCoder/221ABC/d.exe
+./atCoder/ABC252/c.exe
+./atCoder/ABC252/b.exe
+./atCoder/ABC252/a.exe
+./atCoder/ABC252/d.exe
+./atCoder/ABC252/d1.exe
+./atCoder/ABC252/d2.exe
+./atCoder/ABC252/e.exe
+./atCoder/ARC154/c.exe
+./atCoder/ARC154/b.exe
+./atCoder/ARC154/a.exe
+./atCoder/ARC154/b2.exe
+./atCoder/ARC154/b1.exe
+./AtCoder/297ABC/g.exe
+./AtCoder/297ABC/c.exe
+./AtCoder/297ABC/b.exe
+./AtCoder/297ABC/a.exe
+./AtCoder/297ABC/d.exe
+./AtCoder/297ABC/e.exe
+./AtCoder/ABC291/e2.exe
+./AtCoder/ABC291/c.exe
+./AtCoder/ABC291/b.exe
+./AtCoder/ABC291/a.exe
+./AtCoder/ABC291/e6.exe
+./AtCoder/ABC291/e5.exe
+./AtCoder/ABC291/e3.exe
+./AtCoder/ABC291/d.exe
+./AtCoder/ABC291/d1.exe
+./AtCoder/ABC291/e1.exe
+./AtCoder/ABC291/e.exe
+./AtCoder/299ABC/c.exe
+./AtCoder/299ABC/b.exe
+./AtCoder/299ABC/a.exe
+./AtCoder/299ABC/d.exe
+./AtCoder/299ABC/e.exe
+./CodeChef/starters_89/c.exe
+./CodeChef/starters_89/b.exe
+./CodeChef/starters_89/a.exe
+./CodeChef/starters_89/d.exe
+./CodeChef/July_CookOff_2022/c.exe
+./CodeChef/July_CookOff_2022/b.exe
+./CodeChef/July_CookOff_2022/a.exe
+./CodeChef/July_CookOff_2022/d.exe
+./CodeChef/Pradnya_2023/c.exe
+./CodeChef/Pradnya_2023/b.exe
+./CodeChef/Pradnya_2023/a.exe
+./CodeChef/Pradnya_2023/a1.exe
+./CodeChef/Pradnya_2023/d.exe
+./CodeChef/Pradnya_2023/d2.exe
+./CodeChef/Pradnya_2023/d3.exe
+./CodeChef/Pradnya_2023/e1.exe
+./CodeChef/Pradnya_2023/e.exe
+./Facebook/2021 - Round 1/A1/a.exe
+./Facebook/2021 - Round 1/A1/a1.exe
+./Facebook/2021 - Round 1/B/a.exe
+./Facebook/2021 - Round 1/A2/b.exe
+./Facebook/2021 - Round 1/A2/a.exe
+./Facebook/2019/a.exe
+./Facebook/2021 - Round 2/A/a.exe
+./Facebook/2021 - Round 2/C/c.exe
+./Facebook/2021 - Round 2/C/c1.exe
+./Meta HackerCup 2022/Round 1/A1/a1.exe
+./Meta HackerCup 2022/Round 1/B1/b1.exe
+./Meta HackerCup 2022/Round 1/B2/b2.exe
+./Meta HackerCup 2022/Round 1/A2/a2.exe
+./Meta HackerCup 2022/Qualification Round/B1/b1.exe
+./Meta HackerCup 2022/Qualification Round/A/a.exe
+./Meta HackerCup 2022/Round 2/D/d.exe
+./Meta HackerCup 2022/Round 2/A/a.exe
+./Facebook HackerCup 2021/2021 - Round 1/B/a.exe
+./Facebook HackerCup 2021/2021 - Round 2/A/a.exe
+./Facebook HackerCup 2021/2021 - Round 2/C/c.exe
+./Facebook HackerCup 2021/2021 - Round 2/C/c1.exe
+./robocontest_uz/aloqachilar_contest/c.exe
+./robocontest_uz/aloqachilar_contest/b.exe
+./robocontest_uz/aloqachilar_contest/a.exe
+./robocontest_uz/aloqachilar_contest/h2.exe
+./robocontest_uz/aloqachilar_contest/f.exe
+./robocontest_uz/aloqachilar_contest/j.exe
+./robocontest_uz/aloqachilar_contest/h1.exe
+./robocontest_uz/aloqachilar_contest/f2.exe
+./robocontest_uz/aloqachilar_contest/h.exe
+./robocontest_uz/aloqachilar_contest/i.exe
+./robocontest_uz/aloqachilar_contest/e1.exe
+./robocontest_uz/aloqachilar_contest/f1.exe
+./robocontest_uz/aloqachilar_contest/e.exe
