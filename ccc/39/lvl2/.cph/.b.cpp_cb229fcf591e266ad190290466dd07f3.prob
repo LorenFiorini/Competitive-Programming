@@ -1,0 +1,1 @@
+{"name":"Local: b","url":"/home/lorenzo/Competitive-Programming/ccc/39/lvl2/b.cpp","tests":[{"id":1713532977515,"input":"3\nWASAWWDDDSS\nDDSAASDDSAA\nDSASSDWDSDWWAWDDDSASSDWDSDWWAWD","output":"4 3\n3 4\n8 4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/lorenzo/Competitive-Programming/ccc/39/lvl2/b.cpp","group":"local","local":true}
