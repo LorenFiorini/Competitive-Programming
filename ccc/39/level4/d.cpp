@@ -62,14 +62,19 @@ typedef multiset<ll> mseti;
 
 map< char, vector<int> > dir;
 
+string 
 string ans;
 int N;
-
+int n, m;
 int dfs(int r, int c, int i, vstr &v, vvi &vis) {
     if (i >= N) {
         return 1;
     }
+    if (min(r, c) < 0 || r >= n || c >= m || vis[r][c] || v[r][c] == 'X') {
+        return 0;
+    }
     vis[r][c] = 1;
+    
     if (dfs(r + dir['D'][0], c + dir['D'][1], i + 1, v, vis)) {
         ans.push_back('D');
         return 1;
@@ -92,7 +97,6 @@ int dfs(int r, int c, int i, vstr &v, vvi &vis) {
 
 void	solve(void) {
 	ans.clear();
-	int n, m;
 	cin >> m >> n;
     vstr v(n);
     rep (i, 0, n) cin >> v[i];
@@ -110,14 +114,25 @@ void	solve(void) {
         }
         if (r != -1) break;
     }
-    showp(r, c);
+    // showp(r, c);
     // down after X
     // end
     vvi vis(n, vint(m, 0));
     vis[r][c] = 1;
     N = n * m - 1;
-    dfs(r, c+1, 10, v, vis);
-	show(ans);
+    if (
+    dfs(r, c+1, 0, v, vis) ||
+    dfs(r, c-1, 0, v, vis) ||
+    dfs(r+1, c, 0, v, vis) ||
+    dfs(r-1, c, 0, v, vis)
+    ) {
+	
+    int lenS = ans.size();
+    rep(i, 1, lenS) {
+        cout << ans[i];
+    }
+    }
+    cout << endl;
 }
 
 int	main(void) {
@@ -125,10 +140,11 @@ int	main(void) {
 	cin.tie(nullptr);
 	
 	int T = 1;
-	dir['S'] = {1, 0};
-    dir['W'] = {-1, 0};
-    dir['D'] = {0, 1};
-    dir['A'] = {0, -1};
+	dir['S'] = {-1, 0};
+    dir['W'] = {1, 0};
+    dir['D'] = {0, -1};
+    dir['A'] = {0, 1};
+    
 	cin >> T; while (T--)
 	
 	solve();
